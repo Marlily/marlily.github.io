@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+.project-white p {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 100px;
+    height: 5px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+#services hr,
+#projects hr,
+#team hr,
+#contact hr {
+    margin-bottom: 40px;
+}
+
+#services>div>p:nth-of-type(1),
+#projects>div>p:nth-of-type(1),
+#team>div>p:nth-of-type(1),
+#contact>div>p:nth-of-type(1) {
+    margin-bottom: 70px;
+    text-align: center;
+    color: #49463E;
+}
+
+h1,
+h2,
+h3 {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3.5px;
+}
+
+section {
+    padding: 80px 0 80px 0;
+}
+
+
+/* -- COLORS -- */
+
+nav ul li a,
+header h1 span,
+.social a i {
+    color: #9867B9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #49463E;
+}
+
+button,
+hr {
+    background-color: #9867B9;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: #785193;
+}
+
+footer,
+#team {
+    background-color: rgba(152, 103, 185, 0.8);
+}
+
+#about,
+#projects,
+#contact {
+    background-color: #FFFBF2;
+}
+
+
+/* --- Header ----*/
+
+header {
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+}
+
+
+/* --- MENU ---*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 25px;
+}
+
+nav p {
+    margin: 0;
+}
+
+.menu-btn {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+.clicked-button {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+    transform: scale(1.05);
+    color: #9867B9;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vh;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header h2 {
+    margin: 20px 0 50px 0;
+    font-weight: normal;
+}
+
+
+/* --- ABOUT US --- */
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-img {
+    width: 47%;
+    height: 400px;
+    border-bottom-right-radius: 25%;
+    border-top-left-radius: 25%;
+    background-image: url("../img/team.jpeg");
+    border-left: 15px solid #9867B9;
+    background-size: cover;
+}
+
+.about-text {
+    width: 50%;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+.about-text p {
+    line-height: 2;
+    color: #49463E;
+}
+
+.about-text h4:last-of-type {
+    margin-top: 40px;
+}
+
+
+/* --- SERVICES --- */
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services {
+    width: 30%;
+}
+
+#services p {
+    color: #49463E;
+    line-height: 1.5;
+}
+
+.services h4 {
+    text-align: center;
+}
+
+.services-img1 {
+    background-image: url(../img/services-residential.jpeg);
+}
+
+.services-img2 {
+    background-image: url(../img/services-office.jpg);
+}
+
+.services-img3 {
+    background-image: url(../img/services-commercial.jpeg);
+}
+
+.services-img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-right: 15px solid #9867B9;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+/* --- PROJECTS ---*/
+
+#projects .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+#projects .buttons button {
+    margin: 10px;
+    border: 2px solid #9867B9;
+    background-color: transparent;
+    color: #9867B9;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+#projects .buttons button:hover {
+    color: white;
+    background-color: #9867B9;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-bg {
+    background-size: cover;
+    width: 30%;
+    height: 250px;
+    background-position: center;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    margin: 1.66%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.project-white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.project-bg:hover .project-white {
+    opacity: 1;
+}
+
+.project-white p {
+    font-size: 1.5rem;
+    color: #9867B9;
+}
+
+.project-bg1 {
+    background-image: url(../img/projects/1.jpg);
+}
+
+.project-bg2 {
+    background-image: url(../img/projects/2.jpeg);
+}
+
+.project-bg3 {
+    background-image: url(../img/projects/3.jpeg);
+}
+
+.project-bg4 {
+    background-image: url(../img/projects/4.jpeg);
+}
+
+.project-bg5 {
+    background-image: url(../img/projects/5.jpeg);
+}
+
+.project-bg6 {
+    background-image: url(../img/projects/6.jpeg);
+}
+
+.project-bg7 {
+    background-image: url(../img/projects/7.jpeg);
+}
+
+.project-bg8 {
+    background-image: url(../img/projects/8.jpeg);
+}
+
+.project-bg9 {
+    background-image: url(../img/projects/9.jpeg);
+}
+
+.project-bg10 {
+    background-image: url(../img/projects/10.jpeg);
+}
+
+.project-bg11 {
+    background-image: url(../img/projects/11.jpeg);
+}
+
+.project-bg12 {
+    background-image: url(../img/projects/12.jpeg);
+}
+
+/* --- TEAM --- */
+#team *,
+#team .container p,
+#team>div>p:nth-of-type(1) {
+    color: white;
+}
+
+#team hr {
+    background-color: white;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.team-person {
+    width: 22%;
+}
+
+.team-img {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-right: 15px solid #9867B9;
+    margin-bottom: 20px;
+}
+
+.team-img1 {
+    background-image: url(../img/team/1.jpeg);
+}
+
+.team-img2 {
+    background-image: url(../img/team/2.jpeg);
+}
+
+.team-img3 {
+    background-image: url(../img/team/3.jpeg);
+}
+
+.team-img4 {
+    background-image: url(../img/team/4.jpeg);
+}
+
+/* --- CONTACT ---*/
+.container-contact {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#contact h6,
+#contact p {
+    color: #999999;
+}
+
+#contact h4 {
+    margin-bottom: 40px;
+}
+
+#contact h6 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact form input {
+    width: 49%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#contact form textarea {
+    width: 100%;
+}
+
+#contact form input,
+#contact form textarea {
+    border: 0.5px solid #CDCDCD;
+}
+
+#contact form button {
+    margin-top: 30px;
+}
+
+/* --- FOOTER ---*/
+footer {
+    padding: 30px;
+}
+
+.social {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.social a i {
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s;
+}
+
+.social a:hover i{
+    transform: scale(1.1);
+}
+
+footer .container > p {
+    margin: 50px 0 0 0;
+    text-align: center;
+    color: white;
+}
