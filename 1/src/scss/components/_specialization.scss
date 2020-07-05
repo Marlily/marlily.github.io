@@ -1,0 +1,189 @@
+.specialization {
+    position: relative;
+    margin-top: $spacer;
+
+    &::before {
+        content: "";
+        width: 150vw;
+        height: 1px;
+        background-color: $color-dark;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 42%;
+
+        @include lg {
+            opacity: 0.15;
+        }
+    }
+
+    .specialization-title {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+
+        .specialization-title-container {
+            width: 100%;
+
+            @include lg {
+                width: 40%;
+            }
+
+            .title-main {
+                margin-bottom: 0;
+            }
+        }
+
+        .title-txt {
+            width: 100%;
+            margin: 20px 0 5px;
+
+            @include lg {
+                width: 60%;
+                margin: 0 0 5px;
+            }
+        }
+    }
+
+    .specialization-blocks {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .specialization-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: $color-light;
+            position: relative;
+            transition: $transition;
+            margin-bottom: 10px;
+
+            @include md {
+                width: calc(50% - 5px);
+            }
+
+            @include lg {
+                width: calc(25% - 5px);
+                margin-bottom: 0;
+            }
+
+            .secialization-block-icon {
+                width: 30%;
+
+                @include md {
+                    width: 40%;
+                }
+            }
+
+            .secialization-block-title {
+                margin: 20px 0 0;
+                text-transform: uppercase;
+                font-size: 0.8em;
+                transition: $transition;
+            }
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 7px;
+                background-color: $color-main;
+                position: absolute;
+                top: -7px;
+                left: 0;
+                opacity: 0;
+                transition: $transition;
+            }
+
+            .specialization-block-bg {
+                transition: $transition;
+                padding: 30px 30px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .specializaction-block-shape {
+                position: absolute;
+                width: 30px;
+                height: 20px;
+                clip-path: polygon(100% 0, 0 0, 50% 100%);
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: -3;
+                background-image: url(../images/adwokat-agata-tytko-bg2.jpeg);
+                opacity: 0;
+
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-transparent;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-position: center bottom;
+                }
+            }
+
+            &:hover {
+                background-image: url(../images/adwokat-agata-tytko-bg2.jpeg);
+                background-size: cover;
+                background-position: center;
+                transform: scale(1.03);
+                z-index: 99999;
+                box-shadow: 0 23px 97px -34px $color-main;
+
+                .secialization-block-title {
+                    color: $color-light;
+                }
+
+                &:before {
+                    opacity: 1;
+                }
+
+                .specialization-block-bg {
+                    background-color: $color-transparent;
+                }
+
+                .specializaction-block-shape {
+                    opacity: 1;
+                }
+
+            }
+
+
+        }
+    }
+
+    .specialization-txt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 80px;
+
+        .specialization-txt1,
+        .specialization-txt2 {
+            width: 100%;
+            text-align: center;
+
+            @include lg {
+                width: calc(50% - 20px);
+                text-align: left;
+            }
+
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .button {
+        margin: 60px auto 80px;
+    }
+}

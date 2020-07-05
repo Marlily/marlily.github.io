@@ -1,0 +1,46 @@
+.info2 {
+    padding-left: $container-left;
+    padding-right: $container-right;
+    background-color: $color-light;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    ul li,
+    ul li p {
+        color: $color-dark;
+    }
+
+    .info2-title {
+        width: 100%;
+        margin-bottom: 30px;
+
+        .title-main {
+            color: $color-dark;
+        }
+    }
+
+    .info2-lists {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 70px;
+
+        .info2-list {
+            width: 100%;
+
+            @include lg {
+                width: 47%;
+            }
+
+            li {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+
+}

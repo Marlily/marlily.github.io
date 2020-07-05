@@ -1,0 +1,58 @@
+.advice {
+    position: relative;
+
+    .advice-block {
+        background-color: $color-main;
+        width: 22.222vw;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
+
+        .rotate-text {
+            color: $color-back;
+            text-align: center;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+            margin: 0 -50px 0 0;
+            font-size: 17px;
+        }
+    }
+
+    .advice-text {
+        background-color: $color-dark;
+        padding: 50px 60px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: 992px) {
+            padding: 50px 30px;
+        }
+
+        .text-deco-title {
+            text-align: center;
+            color: $color-back;
+            z-index: 999999;
+        }
+
+        .text-italic {
+            color: $color-back;
+            text-align: center;
+            font-weight: 300;
+            z-index: 999999;
+            margin: 10px 0 30px;
+        }
+
+        button {
+            margin: auto;
+            z-index: 999999;
+        }
+
+    }
+}

@@ -1,0 +1,98 @@
+.header {
+
+    .container {
+        padding-top: 125px;
+
+        @include md {
+            padding-top: 0;
+        }
+
+    }
+
+    .header-bg {
+        background-image: url("../images/kancelaria-adwokacka-header.jpg");
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        min-height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include lg {
+            background-position: right;
+            min-height: 550px;
+        }
+
+
+        .block-color {
+            position: absolute;
+            top: 0;
+            right: unset;
+            left: 0;
+            width: 100%;
+
+            @include md {
+                top: 70px;
+                right: -10px;
+                padding: 40px 50px 35px 40px;
+                left: unset;
+                width: max-content;
+            }
+
+            @include xl {
+                top: 100px;
+                right: -100px;
+                padding: 40px 80px 35px 40px;
+            }
+        }
+    }
+
+    .header-quote {
+        padding: 50px;
+        text-align: center;
+
+        .text-italic {
+            margin: 0 0 10px;
+        }
+
+        .quote-name {
+            font-family: $font-light;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+    }
+
+    .block-main {
+        margin-top: 270px;
+
+        @include md {
+            margin-top: unset;
+        }
+    }
+}
+
+
+//header - podstrony 
+.header-small {
+    .header-bg {
+        background-image: url(../images/kancelaria-adwokacka-specjalizacje.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        max-height: 300px;
+        padding: 80px 0;
+
+        .block-color {
+            margin-left: auto;
+            width: 100%;
+
+
+            @include md {
+                transform: translateX(50px);
+                width: max-content;
+            }
+        }
+    }
+}

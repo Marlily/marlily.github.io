@@ -1,0 +1,282 @@
+// Base styles
+body {
+  font-family: $font-main;
+  font-weight: 300;
+  line-height: 1.2;
+  @include reset;
+  color: $color-text;
+  background-color: $color-back;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: $font-main;
+  font-weight: 900;
+  color: $color-main;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-main;
+  font-family: $font-main;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.heading-second {
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-main;
+  font-family: $font-main;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: $color-text;
+  font-style: $font-main;
+  text-transform: uppercase;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: $font-second;
+  color: $color-text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+h2.heading-light,
+h3.heading-light,
+h4.heading-light,
+h5.heading-light,
+h6.heading-light {
+  color: $color-back;
+}
+
+.title-dark {
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-text-dark;
+  font-family: $font-deco;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: $color-text;
+  font-family: $font-main;
+  font-weight: 300;
+}
+
+p.serif {
+  font-family: $font-deco;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: square;
+  padding: 0;
+  margin: 1em 0 1.5em 3em;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a:link,
+a:visited {
+  font-weight: 400;
+  text-decoration: none;
+  color: $color-link;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $color-link;
+}
+
+button {
+  border: 1px solid $color-main;
+  text-transform: uppercase;
+  color: $color-back;
+  background-color: $color-main;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-second;
+  padding: 10px 20px;
+  transition: $transition;
+
+  &:hover {
+    border: 1px solid $color-main;
+    color: $color-main;
+    background-color: transparent;
+  }
+}
+
+
+// custom
+a.link-deco {
+  color: $color-main;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: $transition;
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 1.5px;
+    background-color: $color-main;
+    display: block;
+    margin-top: 15px;
+    transition: $transition;
+  }
+
+  &:hover::after {
+    width: 60px;
+
+  }
+}
+
+.title-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 70px;
+    background-color: $color-main;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+}
+
+.title-line-left {
+  &::before {
+    left: -80px;
+  }
+}
+
+.title-line-right {
+
+  &::before {
+    z-index: 9999;
+    left: unset;
+    right: 0;
+    transform: translateX(55%);
+    width: 100px;
+
+    @media (max-width: 992px) {
+      width: 0;
+    }
+  }
+}
+
+.icon-text {
+  color: $color-dark;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: $font-second;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.icon-text-white {
+  color: $color-back;
+  font-style: 14px;
+}
+
+.section-heading {
+  font-size: 20px;
+  color: $color-dark;
+}
+
+.section-heading-light {
+  color: $color-back;
+}
+
+.text-deco {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $color-text-dark;
+  font-family: $font-deco;
+}
+
+.text-deco-title {
+  text-transform: uppercase;
+  font-size: 33px;
+  letter-spacing: 2px;
+  color: $color-text-dark;
+  font-family: $font-deco;
+
+  span {
+    color: $color-main;
+  }
+}
+
+.text-italic {
+  font-style: italic;
+  font-family: $font-main;
+  font-weight: 300;
+}
+
+.text-italic-bold {
+  font-weight: 600;
+}
+
+// bg icon 
+.bg-icon {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../images/icons/katarzyna-cupial-ikona-bg.svg);
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 77% 31%;
+    background-size: 41%;
+    z-index: 0;
+  }
+}
+
+.container-custom-right {
+  padding-right: 22.222vw;
+
+  @media (max-width: 992px) {
+    padding-right: 0;
+  }
+}
+
+.container-custom-left {
+  padding-left: 22.222vw;
+
+  @media (max-width: 992px) {
+    padding-left: 0;
+  }
+}

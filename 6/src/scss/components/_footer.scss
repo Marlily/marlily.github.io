@@ -1,0 +1,145 @@
+.footer {
+    padding: 70px 18vw 50px 22vw;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 50%;
+        height: 1px;
+        position: absolute;
+        background-color: $color-text;
+        opacity: 0.1;
+        top: 0;
+        right: 0;
+    }
+
+    @media (max-width: 992px) {
+        padding: 70px 20px;
+    }
+
+    .logo {
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+        img {
+            width: 170px;
+            height: auto;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            margin-top: 50px;
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            margin-top: 0;
+        }
+
+        a {
+            display: flex;
+
+            @media (max-width: 992px) {
+                justify-content: center;
+            }
+
+            p {
+                color: $color-text-dark;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-family: $font-second;
+                font-weight: 600;
+            }
+
+            .contact-letter {
+                color: $color-main;
+                margin-right: 30px;
+                transition: $transition;
+            }
+
+            &:hover {
+                .contact-letter {
+                    margin-right: 45px;
+                }
+            }
+        }
+    }
+
+    .nav-menu {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            list-style-type: none;
+            margin: 0 0 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media (min-width: 768px) and (max-width: 992px) {
+                justify-content: center;
+            }
+
+            @media (max-width: 992px) {
+                margin: 40px 0 0 0;
+            }
+
+            li {
+                width: 100%;
+
+                @media (min-width: 768px) and (max-width: 992px) {
+                    width: unset;
+                    margin: 20px 30px;
+                }
+
+                @media (max-width: 992px) {
+                    text-align: center;
+                }
+
+                a {
+                    color: $color-text-dark;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-family: $font-second;
+                    font-weight: 400;
+                    transition: $transition;
+
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        p {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-family: $font-second;
+            margin: 0;
+        }
+
+        hr {
+            width: 43%;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

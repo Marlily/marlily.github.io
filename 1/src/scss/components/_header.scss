@@ -1,0 +1,245 @@
+.header {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    .header-block {
+        width: 100%;
+        background-color: $color-main;
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        padding: 50px;
+
+        @include md {
+            display: flex;
+        }
+
+        @include lg {
+            width: 27.5%;
+            flex-direction: column;
+        }
+
+        .header-block-icon {
+            position: absolute;
+            right: 0;
+            bottom: 20%;
+            z-index: 0;
+            opacity: 0.1;
+            height: 150px;
+
+            @include lg {
+                height: 250px;
+            }
+        }
+
+        .logo {
+            width: 15%;
+            height: auto;
+            margin: auto;
+            display: block;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            @include lg {
+                width: 70%;
+                padding-top: 40px;
+            }
+        }
+
+        .header-block-main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-transform: uppercase;
+            align-items: center;
+
+            @include lg {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
+
+            .header-block-txt {
+                font-size: 1em;
+                margin: 0;
+                line-height: 1.2;
+                color: $color-light;
+                text-align: center;
+
+                @include lg {
+                    font-size: 1.9em;
+                    text-align: left;
+                }
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            .header-block-txt2 {
+                color: $color-light;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 0.8em;
+
+                @include lg {
+                    font-size: 1.2em;
+                }
+            }
+
+            .header-block-contact {
+                color: $color-light;
+                font-weight: 900;
+                font-size: 0.8em;
+                height: 35px;
+                display: flex;
+                align-items: center;
+
+                @include lg {
+                    font-size: 1.5em;
+                }
+
+                img {
+                    height: 100%;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .header-main {
+        width: 100%;
+        background-image: url(../images/adwokat-agata-tytko-bg.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        @include lg {
+            width: 72.5%;
+        }
+
+        .header-mask {
+            background-color: $color-transparent;
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            overflow: hidden;
+
+            @include lg {
+                padding-left: 150px;
+                padding-top: 50px;
+                padding-right: 12vw;
+            }
+
+            nav {
+                .button-menu {
+                    width: 50px;
+                    height: 50px;
+                    margin-left: auto;
+                    cursor: pointer;
+                    margin-bottom: 30px;
+
+                    img {
+                        padding: 10px;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @include lg {
+                        display: none;
+                    }
+                }
+
+                ul.menu {
+                    display: none;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    right: -100%;
+                    position: absolute;
+                    transition: all 1s;
+
+                    @include lg {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        position: static;
+                    }
+
+                    li {
+                        &:hover {
+                            background-color: $color-main;
+                        }
+
+                        a {
+                            font-size: 1.5em;
+
+                            @include lg {
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
+
+                    &.open {
+                        display: flex;
+                        width: 95vw;
+                        height: 75vh;
+                        position: absolute;
+                        top: 105px;
+                        box-shadow: -7px 10px 0px -3px rgba(0, 0, 0, 1);
+                        justify-content: space-around;
+                        background: #d5b467;
+                        z-index: 9999;
+                        padding-right: 30px;
+                        padding-left: 80px;
+                        animation: right 0.5s forwards;
+
+                        @keyframes right {
+                            to {
+                                right: 0;
+                            }
+                        }
+
+                        @include md {
+                            top: 300px;
+                            height: 50vh;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            .header-title {
+                margin: 75px 0;
+                padding-right: 20%;
+
+                @include lg {
+                    margin: 160px 0;
+                }
+
+                .title-txt {
+                    color: $color-light;
+                }
+            }
+        }
+    }
+
+    .btn-scroll {
+        width: 90px;
+        height: 90px;
+        background-color: $color-main;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

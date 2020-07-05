@@ -1,0 +1,19 @@
+// import all styles
+
+// helpers
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+
+// base
+@import 'base/_normalize';
+@import 'base/_layout';
+@import 'base/_base';
+
+
+// components
+@import 'components/_header';
+@import 'components/_office';
+@import 'components/_specialization';
+@import 'components/_references';
+@import 'components/_contact';
+@import 'components/_footer';

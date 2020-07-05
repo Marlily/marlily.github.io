@@ -1,0 +1,24 @@
+// Generic Sass mixins
+
+// reset padding and margin
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin rotate-bg {
+  position: relative;
+
+  &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url("../images/edyta-kwiecien-bg.jpg");
+      background-position: bottom;
+      background-size: cover;
+      z-index: -2;
+      transform: rotate(180deg);
+  }
+}

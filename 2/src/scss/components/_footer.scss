@@ -1,0 +1,119 @@
+.footer {
+    padding-left: $container-left;
+    padding-right: $container-right;
+    padding-top: 40px;
+    position: relative;
+
+    .footer-nav {
+        margin-bottom: 50px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            flex-direction: column;
+            align-items: center;
+
+            @include sm {
+                flex-direction: row;
+
+            }
+
+            li {
+                margin: 15px 0;
+
+                @include sm {
+                    margin: 0;
+                }
+
+                a {
+                    color: $color-light;
+                    font-size: 18px;
+                    transition: $transition;
+
+                    @include sm {
+                        font-size: 11px;
+                    }
+
+                    @include lg {
+                        font-size: 13px;
+                    }
+
+                    &:hover {
+                        color: $color-main;
+                    }
+
+                    img {
+                        width: 80%;
+                        height: auto;
+                        margin: auto;
+
+                        @include sm {
+                            width: 150px;
+                        }
+
+                        @include lg {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+
+            .footer-logo {
+                order: -1;
+                text-align: center;
+                margin-bottom: 40px;
+
+                @include sm {
+                    order: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+        flex-direction: column;
+
+        @include sm {
+            flex-direction: row;
+        }
+
+        .footer-links {
+            a {
+                font-size: 13px;
+                color: $color-light;
+                transition: $transition;
+
+                &:hover {
+                    color: $color-main;
+                }
+            }
+        }
+
+        .copy {
+            font-size: 13px;
+            color: $color-light;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 200vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url(../images/edyta-kwiecien-bg.jpg);
+        background-size: cover;
+        background-position: bottom;
+        z-index: -1;
+        opacity: 0.3;
+    }
+}

@@ -1,0 +1,195 @@
+// Base styles
+head {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  font-weight: 300;
+  line-height: 1.2;
+  @include reset;
+  color: $color-dark;
+  background-color: $color-bg;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 0.8em;
+  line-height: 1.5;
+  font-weight: 300;
+
+  &.bold {
+    font-weight: 500;
+  }
+}
+
+ul.menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
+
+  @include lg {
+    justify-content: space-between;
+  }
+
+  li {
+    border-radius: 50px;
+    transition: $transition;
+
+
+    a {
+      text-transform: uppercase;
+      padding: 15px 16px;
+      font-size: 0.8em;
+      font-weight: 500;
+      color: $color-light;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $color-main;
+  transition: $transition;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $color-main;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+//coontainer
+.container-custom {
+  padding-right: 5%;
+  padding-left: 5%;
+
+  @include md {
+    padding-right: 14%;
+    padding-left: 14%;
+  }
+}
+
+.container-right {
+  padding-right: 14%;
+}
+
+.container-left {
+  padding-left: 14%;
+}
+
+//headings
+.title-top {
+  font-family: $font-main;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 25px 18px 20px 18px;
+  margin-bottom: 15px;
+  position: relative;
+  letter-spacing: 2.5px;
+  color: $color-main;
+
+  &::before {
+    content: "";
+    width: 21px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-left: 3px solid $color-main;
+    border-top: 3px solid $color-main;
+  }
+
+  &.title-white {
+    color: $color-light;
+
+    &::before {
+      border-left: 3px solid $color-light;
+      border-top: 3px solid $color-light;
+    }
+  }
+
+  @include md {
+    font-size: 0.7em;
+  }
+}
+
+.title-main {
+  font-family: $font-main;
+  color: $color-dark;
+  font-weight: 900;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+
+  @include md {
+    font-size: 2.2em;
+  }
+
+  &.light {
+    color: $color-light;
+  }
+}
+
+.title-txt {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+//buttons 
+a.button,
+.button {
+  border: 1px solid $color-main;
+  background-color: $color-main;
+  color: $color-light;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  border-radius: 50px;
+  padding: 16px 30px;
+  display: inline-block;
+  font-weight: 900;
+  width: fit-content;
+  cursor: pointer;
+  transition: $transition;
+  border: 3px solid $color-main;
+
+  &:hover {
+    border: 3px solid $color-light;
+    color: $color-main;
+    background-color: transparent;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    color: $color-main;
+  }
+}

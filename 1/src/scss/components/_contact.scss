@@ -1,0 +1,127 @@
+.contact {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .contact-info {
+        width: 100%;
+        background-color: $color-main;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include lg {
+            width: 40%;
+        }
+
+        .title-top,
+        .title-main,
+        .title-txt,
+        .contact-info-item a {
+            color: $color-light;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin: 28px 0;
+
+            .contact-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                background-color: $color-light;
+                border-radius: 50px;
+                margin-right: 20px;
+            }
+
+            .contact-info-address {
+                text-transform: uppercase;
+                transition: $transition;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .contact-info-txt {
+                font-weight: 500;
+                transition: $transition;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+    }
+
+    .contact-form {
+        width: 100%;
+        background-color: $color-dark;
+        padding-left: 14%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include lg {
+            width: 60%;
+            padding-left: 50px;
+        }
+
+        .title-top,
+        .title-main,
+        .title-txt {
+            color: $color-light;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .form-name,
+            .form-tel,
+            .form-message {
+                border: 1px solid $color-light;
+                border-radius: 30px;
+                background-color: transparent;
+                padding: 15px;
+
+                &:focus {
+                    border: 1px solid $color-main;
+                }
+            }
+
+            .form-name,
+            .form-tel {
+                width: 100%;
+                margin-bottom: 20px;
+
+                @include lg {
+                    width: 48%;
+                }
+            }
+
+            .form-message {
+                width: 100%;
+                margin-bottom: 20px;
+                padding-top: 20px;
+            }
+
+            .button {
+                margin-left: auto;
+                margin-right: auto;
+
+                @include lg {
+                    margin-left: auto;
+                    margin-right: unset;
+                }
+
+            }
+        }
+    }
+}

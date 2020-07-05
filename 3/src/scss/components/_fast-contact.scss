@@ -1,0 +1,22 @@
+.contactMe {
+    margin: 50px 30px;
+    border: 2px solid $color-main;
+    text-align: center;
+    padding: 80px 30px 70px;
+
+    @include sm {
+        margin: 50px 100px;
+    }
+
+    .title-top {
+        margin-bottom: 10px;
+    }
+
+    .title-main {
+        font-size: 26px;
+    }
+
+    .button {
+        margin: 25px auto 0;
+    }
+}

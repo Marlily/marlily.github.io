@@ -1,0 +1,207 @@
+// Base styles
+head {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  font-weight: 300;
+  line-height: 1.2;
+  @include reset;
+  color: $color-light;
+  background-color: $color-dark;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+ul li::before {
+  content: "\25A0";
+  color: $color-main;
+  display: inline-block;
+  width: 25px;
+  margin-left: -25px;
+}
+
+ul.menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+ul.menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.menu li::before {
+  display: none;
+}
+
+ul.menu li:hover a {
+  color: $color-light;
+}
+
+input:focus {
+  outline: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $color-main;
+  transition: $transition;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $color-main;
+}
+
+a.more,
+.more {
+  color: $color-light;
+  font-size: 14px;
+  font-family: $font-main;
+  font-weight: 600;
+  transition: $transition;
+
+  img {
+    margin-left: 12px;
+    transition: $transition;
+  }
+
+
+  &:hover {
+    img {
+      margin-left: 16px;
+    }
+  }
+}
+
+a.more-white,
+.more-white {
+  color: $color-light;
+}
+
+a.more:hover {
+  color: $color-light;
+}
+
+.title-top {
+  font-family: $font-main;
+  font-size: 0.6em;
+  margin-bottom: 5px;
+
+  &.title-color {
+    color: $color-main;
+  }
+
+  @include md {
+    font-size: 0.8em;
+  }
+}
+
+.title-main {
+  font-family: $font-second;
+  font-size: 1.6em;
+
+  @include md {
+    font-size: 1.8em;
+  }
+}
+
+.title-top-big {
+  font-family: $font-main;
+  font-size: 1em;
+  margin-bottom: 5px;
+
+  @include md {
+    font-size: 1.4em;
+  }
+}
+
+.title-main-big {
+  font-family: $font-second;
+  font-size: 2em;
+
+  @include md {
+    font-size: 2.8em;
+  }
+
+}
+
+.title-inner {
+  color: $color-light;
+  font-size: 0.7em;
+  font-family: $font-second;
+  margin: 20px 0 20px;
+
+  @include lg {
+    font-size: 1em;
+  }
+}
+
+.line {
+  width: 100%;
+  border-top: 1px solid $color-main;
+}
+
+.online-box {
+  background-image: url(../images/edyta-kwiecien-block-bg.jpg);
+  background-size: cover;
+  background-position: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: $color-light;
+  text-align: center;
+  padding: 40px 50px;
+  margin-bottom: -225px;
+
+  .title-main {
+    color: $color-main;
+  }
+
+  .more:hover img {
+    margin-left: 16px;
+
+  }
+
+  &::before {
+    content: "";
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: $border;
+  }
+}

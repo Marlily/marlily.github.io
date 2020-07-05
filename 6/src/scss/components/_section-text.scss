@@ -1,0 +1,12 @@
+.specialization-text {
+    padding: 50px 0 30px;
+
+    @media (max-width: 992px) {
+        text-align: center;
+        padding: 50px 30px 40px;
+    }
+
+    .text-italic {
+        margin: 0 0 40px;
+    }
+}

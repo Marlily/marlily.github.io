@@ -1,0 +1,27 @@
+.footer {
+    margin-bottom: 20px;
+
+    nav {
+        padding: 30px 20%;
+
+        .menu li {
+            &:hover {
+                a {
+                    color: $color-main;
+                    text-decoration: underline;
+                }
+            }
+
+            a {
+                color: $color-dark;
+            }
+        }
+    }
+
+    .copy {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,294 @@
+// Base styles
+head {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-text;
+  font-weight: 300;
+  line-height: 1.2;
+  @include reset;
+  color: $color-text;
+  background-color: $color-bg;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include md {
+    font-size: 14px;
+  }
+
+  b {
+    font-family: $font-md;
+  }
+}
+
+ul {
+  list-style-type: square;
+  padding: 0;
+  margin: 0;
+}
+
+ul.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+ul.menu li a {
+  font-family: $font-light;
+  text-transform: uppercase;
+  color: $color-main;
+}
+
+strong {
+  font-weight: 600;
+}
+
+input:focus {
+  outline: none;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: $color-main;
+  transition: $transition;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-main;
+  transition: $transition;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $color-main;
+}
+
+.container {
+  padding: 0;
+}
+
+.button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: $color-light;
+  background-color: $color-main;
+  font-family: $font-deco;
+  font-size: 15px;
+  padding: 20px;
+  text-transform: uppercase;
+  width: max-content;
+  transition: $transition;
+  position: relative;
+}
+
+a.button:visited {
+  color: $color-light;
+}
+
+.button-clear-hover::before {
+  display: none; 
+}
+
+a.button:hover,
+input.button:hover,
+.block-arrow:hover {
+  transform: translateY(-10px);
+  color: $color-light;
+} 
+
+.button::after,
+.block-arrow::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid $color-main;
+  opacity: 0.3;
+  z-index: -1;
+  transition: $transition;
+}
+
+.button:hover::after,
+.block-arrow:hover::after {
+  transform: translate(10px, 10px);
+}
+
+a.button::before {
+  display: none;
+}
+
+.text-italic {
+  font-family: $text-italic;
+  font-size: 23px;
+  line-height: 1.5;
+  margin: 0;
+  
+  @include md {
+    font-size: 22px;
+  }
+}
+
+//jasny blok 
+.block-main {
+  background-color: $color-light;
+  padding: 40px 30px;
+}
+
+//główny tytuł sekcji
+.main-title {
+  font-family: $font-deco;
+  color: $color-main;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+//tekst nad tytułem sekcji
+.title-top {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: $font-light;
+  color: $color-text;
+  letter-spacing: 2px;
+
+  @include md {
+    font-size: 13px;
+  }
+}
+
+//tekst pod tytułem sekcji
+.title-bottom {
+  color: $color-text;
+  font-family: $font-light;
+  font-size: 22px;
+
+  @include md {
+    font-size: 18px;
+  }
+}
+
+.title-text {
+  font-family: $font-textB;
+  font-size: 17px;
+  line-height: 1.5;
+
+  @include md {
+    font-size: 14px;
+  }
+}
+
+//nagłówki - sekcja work
+.title-second {
+  font-size: 18px;
+  font-family: $font-light;
+  margin-bottom: .5rem;
+}
+
+//nagłówki - telefony komórkowe, adres email, skorzystaj z formularza 
+.title-small {
+  font-family: $font-light;
+  font-size: 15px;
+  color: $color-dark;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  @include md {
+    font-size: 10px;
+  }
+}
+
+//telefony, adresy, maile
+.contact-text {
+  color: $color-main;
+  font-size: 14px;
+  font-family: $font-deco;
+  text-transform: uppercase;
+}
+
+//box zielony
+.block-color {
+  background-color: $color-main;
+  padding: 40px 80px 35px 40px;
+  color: $color-light;
+  width: max-content;
+
+  .block-color-txt1 {
+    font-size: 11px;
+    color: $color-light;
+    font-family: $font-light;
+    text-transform: uppercase;
+    margin: 0 0 3px;
+    letter-spacing: 1.5px;
+  }
+
+  .block-color-txt2 {
+    font-size: 22px;
+    color: $color-light;
+    font-family: $font-deco;
+    text-transform: uppercase;
+    margin: 0;
+  }
+} 
+
+//box strzałki
+.block-arrow {
+  width: 80px;
+  height: 80px;
+  background-color: $color-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: $transition;
+  cursor: pointer;
+  position: relative;
+
+  img {
+    width: 20px;
+  }
+} 
+
+//linia pionowa w sekcjach
+.section-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    z-index: -1;
+    background-color: $color-border;
+    left: 40px;
+  }
+  
+}

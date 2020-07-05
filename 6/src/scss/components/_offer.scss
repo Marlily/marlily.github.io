@@ -1,0 +1,159 @@
+.offer {
+
+    @media (max-width: 992px) {
+        padding-top: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .offer-container1 {
+        padding: 50px 30px 50px 22.2222vw;
+
+        @media (max-width: 992px) {
+            padding: 0px 30px 50px;
+        }
+
+        .text-deco {
+            margin: 20px 0;
+        }
+    }
+
+    .offer-container2 {
+        background-color: $color-dark;
+        padding: 50px 15% 0 40px;
+        position: relative;
+        overflow: hidden;
+
+        p {
+            color: $color-back;
+            margin-bottom: 80px;
+        }
+
+        .offer-heading {
+            margin-bottom: 20px;
+        }
+
+        .offer-icon {
+            z-index: 99999999999999;
+        }
+    }
+
+    .offer-container3 {
+        height: 330px;
+        background-image: url("../images/katarzyna-cupial-adwokat-bg-2.jpeg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .offer-container4 {
+        padding: 50px 17vw 50px 40px;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 992px) {
+            height: unset;
+        }
+    }
+
+    .offer-container5 {
+        height: 60px;
+        background-color: $color-main;
+        padding-left: 22.222vw;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+
+            @media (max-width: 992px) {
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 992px) {
+            padding: 0 30px;
+            text-align: center;
+        }
+    }
+
+    .offer-container6 {
+        padding-left: 40px;
+        background-color: $color-bg-light;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @media (max-width: 992px) {
+            height: 60px;
+            padding: 0 20px;
+        }
+
+        .title-dark {
+            margin: auto;
+
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 80%;
+            height: 1px;
+            position: absolute;
+            background-color: $color-text;
+            bottom: 0;
+            right: 0;
+            opacity: 0.15;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .offer-container7 {
+        padding: 70px 50px;
+        background-color: $color-bg-light;
+
+        .offer-icon {
+            text-align: center;
+            position: relative;
+            transition: $transition;
+
+            @media (max-width: 992px) {
+                margin-bottom: 50px;
+            }
+
+            .icon-arrow {
+                position: absolute;
+                top: 12%;
+                right: -10px;
+                width: 23px;
+                height: auto;
+
+                @media (max-width: 992px) {
+                    display: none;
+                }
+            }
+
+
+            .offer-icon-img {
+                height: 85px;
+                transition: $transition;
+
+            }
+
+            .icon-text {
+                margin-top: 50px;
+            }
+
+            &:hover {
+                .offer-icon-img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
