@@ -1,48 +1,18 @@
 // Global Sass variables
 
 // fonts
-@font-face {
-    font-family: HelveticaNeueLTPro-Lt;
-    src: url(../fonts/HelveticaNeueLTPro-Lt.otf);
-}
+$font-main: 'Roboto', sans-serif;
+$font-second: 'Open Sans', sans-serif;
+$font-deco: 'Times New Roman', serif;
 
-@font-face {
-    font-family: HelveticaNeueLTPro-LtCn;
-    src: url(../fonts/HelveticaNeueLTPro-LtCn.otf);
-}
-
-@font-face {
-    font-family: HelveticaNeueLTPro-Md;
-    src: url(../fonts/HelveticaNeueLTPro-Md.otf);
-}
-
-@font-face {
-    font-family: HelveticaNeueLTPro-MdCn;
-    src: url(../fonts/HelveticaNeueLTPro-MdCn.otf);
-}
-
-@font-face {
-    font-family: HelveticaNeueLTPro-Roman;
-    src: url(../fonts/HelveticaNeueLTPro-Roman.otf);
-}
-
-$font-text: HelveticaNeueLTPro-Lt, sans-serif;
-$font-textB: HelveticaNeueLTPro-Roman, sans-serif;
-$font-deco: HelveticaNeueLTPro-MdCn, sans-serif;
-$font-md: HelveticaNeueLTPro-Md, sans-serif;
-$font-light: HelveticaNeueLTPro-LtCn, sans-serif;
-$text-italic: 'Open Sans', sans-serif;
-
-  
 // colors
-$color-light: #fff;
-$color-text: #474747;
-$color-bg: #f3f3f3;
-$color-dark: #000;
-$color-main: #144235;
-$color-link: #144235;
-$color-border: #d3d3d3;
+$color-back: #fff;
+$color-text-dark: #000000;
+$color-text: #222222;
+$color-dark: #45484f;
+$color-main: #cca375;
+$color-link: #cca375;
+$color-bg-light: #efefef;
 
 
-//animate
-$transition: all 0.5s;
+$transition: all 0.6s ease;

@@ -6,16 +6,15 @@
 
 // base
 @import 'base/_normalize';
-@import 'base/_layout';
 @import 'base/_base';
-
+@import 'base/_layout';
 
 // components
-@import 'components/_nav';
 @import 'components/_header';
+@import 'components/_offer';
 @import 'components/_about';
-@import 'components/_work';
-@import 'components/_team';
-@import 'components/_simple';
-@import 'components/_contact';
+@import 'components/_section-text';
+@import 'components/_advice';
+@import 'components/_specialization-offer';
+@import 'components/_specialization-info';
 @import 'components/_footer';

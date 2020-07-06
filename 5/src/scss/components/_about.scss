@@ -1,179 +1,130 @@
 .about {
 
-    .col-2 {
-        padding: 0;
-    }
-
-    .col-10 {
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .about-italic {
-        padding: 70px 30% 45px 50px;
-    }
-
-    .block-main {
+    .about-bg-container {
+        padding: 0 30px 0 0;
         position: relative;
 
-        .carousel {
-            .carousel-indicators {
-                margin-right: 0;
-                left: unset;
-                margin-bottom: 0;
-                margin-top: 20px;
-
-                li {
-
-                    height: 4px;
-                    width: 17px;
-                    margin-right: 5px;
-                    margin-left: 5px;
-                    opacity: 0.2;
-                    background-color: $color-text;
-                }
-
-                li.active {
-                    background-color: $color-main;
-                    opacity: 1;
-                }
-            }
-
-            .carousel-item {
-
-                .about-slide {
-                    display: flex;
-                    margin: 20px 0 40px;
-
-                    .about-slide-txt {
-                        display: inline-block;
-                        width: 70%;
-                        margin: 0;
-                    }
-
-                    .slide-icon {
-                        display: inline-block;
-                        height: 90px;
-                        width: auto;
-                        margin: 0 5%;
-                    }
-                }
-
-
-            }
-
+        @media (max-width: 992px) {
+            padding: 0;
         }
 
-        .about-block-btnL {
-            position: absolute;
-            left: 0;
-            bottom: -20px;
-
-            @include md {
-                left: -20px;
-            }
-        }
-
-    }
-
-    .block-about-big {
-        margin-left: auto;
-    }
-
-    .about-bg {
-        position: relative;
-
-        .about-bg-img {
-            position: absolute;
-            right: 15px;
-            width: 110%;
-            height: 120%;
-            background-image: url(../images/kancelaria-adwokacka-about.jpeg);
+        .about-bg {
+            background-image: url("../images/katarzyna-cupial-adwokat-bg.jpeg");
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1;
+            height: 100%;
+            width: 95%;
+            padding: 70px 0;
+            position: relative;
+            text-align: right;
+
+            @media (max-width: 992px) {
+                padding: 0;
+                width: 100%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $color-text-dark;
+                top: 0;
+                left: 0;
+                opacity: 0.8;
+                filter: contrast(1);
+            }
+        }
+
+        .bg-icon {
+            &::after {
+                background-image: url("../images/icons/katarzyna-cupial-ikona-bg-2.png");
+                background-position: 37% 4%;
+                filter: brightness(1);
+            }
+        }
+
+        
+
+        .about-photo {
+            height: inherit;
+            width: 360px;
+            position: relative;
+            right: -90px;
+            z-index: 999999;
+
+            @media (max-width: 992px) {
+                width: 54vw;
+                right: 0;
+                top: 50px;
+            }
         }
     }
 
-
-    .about-main {
+    .about-text-container {
+        padding: 95px 18vw 95px 80px;
+        justify-content: space-between;
         display: flex;
         flex-direction: column;
 
-        @include lg {
-            flex-direction: row;
+        @media (max-width: 992px) {
+            padding: 95px 40px 0;
         }
 
-        .about-main-photo {
-            background-image: url(../images/kancelaria-adwokacka-about-2.jpeg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 40%;
+        .about-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            .about-main-photo-bg {
-                width: 100%;
-                height: 100%;
-                background-color: $color-main;
-                opacity: 0.9;
-                position: relative;
-                overflow: hidden;
+            @media (max-width: 992px) {
+                flex-direction: column;
+            }
 
-
-                img {
-                    height: 110%;
+            h2 {
+                &::after {
+                    content: "";
+                    height: 1px;
+                    width: 100px;
+                    background-color: #222;
                     display: inline-block;
                     position: absolute;
                     top: 50%;
-                    transform: translateY(-50%);
-                    left: 50%;
-                    opacity: 0.2;
-                }
-            }
-        }
+                    right: 0;
+                    transform: translateX(120%);
+                    opacity: 0.3;
 
-        .about-main-info {
-            width: 100%;
-            padding: 50px;
-
-            @include lg {
-                width: 60%;
-            }
-
-            .about-main-text {
-                margin-top: 30px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-
-                p {
-                    width: 100%;
-                    margin-bottom: 30px;
-
-                    @include md {
-                        width: calc(50% - 20px);
-                        margin: 0;
+                    @media (max-width: 992px) {
+                        display: none;
                     }
                 }
             }
         }
     }
 
-    .about-contact {
-        align-items: flex-end;
+    .about-text {
         display: flex;
-        padding-left: 0;
-        padding-right: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-        .button-about-contact {
-            width: 100%;
+        p {
+            width: 47%;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
         }
     }
 
-    .about-main-container {
-        padding-right: 0;
+    .link-deco {
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+        &::after {
+            @media (max-width: 992px) {
+                margin: 15px auto;
+            }
+        }
     }
+
 
 }

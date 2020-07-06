@@ -1,194 +1,145 @@
 .footer {
+    padding: 70px 18vw 50px 22vw;
+    position: relative;
 
-    .container {
-        background-color: $color-light;
-        padding: 60px 30px 80px 30px;
-        position: relative;
+    &::before {
+        content: "";
+        width: 50%;
+        height: 1px;
+        position: absolute;
+        background-color: $color-text;
+        opacity: 0.1;
+        top: 0;
+        right: 0;
+    }
 
-        @include xl {
-            max-width: 1180px;
-        }
+    @media (max-width: 992px) {
+        padding: 70px 20px;
+    }
 
-        @include md {
-            padding: 60px 30px 40px;
-        }
-
-        .block-arrow {
-            position: absolute;
-            bottom: 0;
-            right: unset;
-            left: 50%;
-            transform: translatex(-50%);
-
-            @include md {
-                right: 30px;
-                left: unset;
-            }
-        }
-
-        .footer-logo-container {
+    .logo {
+        @media (max-width: 992px) {
             text-align: center;
-
-            @include md {
-                text-align: unset;
-            }
-
-
-            .footer-logo {
-
-
-                img {
-                    width: 120px;
-                }
-
-            }
         }
 
-        .footer-line {
-            width: 110vw;
-            border-top: 3px solid $color-bg;
-            transform: translateX(-9%);
-            margin: 40px 0;
+        img {
+            width: 170px;
+            height: auto;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            margin-top: 50px;
         }
 
+        @media (min-width: 768px) and (max-width: 992px) {
+            margin-top: 0;
+        }
 
-        .footer-info {
+        a {
             display: flex;
-            flex-direction: column;
-            padding: 0 60px;
-            justify-content: space-between;
-            margin-top: 70px;
 
-            @include md {
-                flex-direction: row;
-                padding: 0 60px 0 40px;
-                margin-top: 0;
+            @media (max-width: 992px) {
+                justify-content: center;
             }
 
-            .title-small {
-                font-size: 15px;
-
-                @include md {
-                    font-size: 10px;
-                }
+            p {
+                color: $color-text-dark;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-family: $font-second;
+                font-weight: 600;
             }
 
-            .contact-text {
-                font-size: 24px;
-
-                @include md {
-                    font-size: 15px;
-                }
+            .contact-letter {
+                color: $color-main;
+                margin-right: 30px;
+                transition: $transition;
             }
 
-            .footer-item {
-                text-align: center;
-                margin-bottom: 30px;
-
-                @include md {
-                    text-align: unset;
-                }
-            }
-
-
-            .footer-item2 {
-                .footer-phones {
-                    display: flex;
-                    flex-direction: column;
+            &:hover {
+                .contact-letter {
+                    margin-right: 45px;
                 }
             }
         }
+    }
 
-        .footer-button-contact {
+    .nav-menu {
+        height: 100%;
+
+        ul {
+            height: 100%;
+            list-style-type: none;
+            margin: 0 0 0 30px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            @include md {
-                align-items: flex-end;
-            }
-
-            .button {
-                padding: 10px;
-
-                img {
-                    height: 8px;
-                    margin-right: 5px;
-                    margin-left: 5px;
-                }
-            }
-        }
-
-        .menu {
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
+
+            @media (min-width: 768px) and (max-width: 992px) {
+                justify-content: center;
+            }
+
+            @media (max-width: 992px) {
+                margin: 40px 0 0 0;
+            }
 
             li {
-                margin-right: 20px;
-                margin-left: 20px;
-                transition: $transition;
-                transition-timing-function: ease-out;
+                width: 100%;
 
-                @include md {
-                    margin-right: 45px;
-                    margin-left: auto;
+                @media (min-width: 768px) and (max-width: 992px) {
+                    width: unset;
+                    margin: 20px 30px;
+                }
+
+                @media (max-width: 992px) {
+                    text-align: center;
                 }
 
                 a {
-                    font-size: 16px;
+                    color: $color-text-dark;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-family: $font-second;
+                    font-weight: 400;
+                    transition: $transition;
 
-                    @include md {
-                        font-size: 14px;
+                    &:hover {
+                        font-weight: 600;
                     }
                 }
-
-                &:hover a {
-                    font-weight: bold;
-                }
             }
         }
+    }
 
-        .footer-copy {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            margin-top: 30px;
+    .copyright {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-            @include md {
-                justify-content: flex-end;
-
-            }
-
-            @include lg {
-                margin-top: 0;
-            }
-
-            p {
-                font-family: $font-light;
-                color: $color-text;
-            }
-
+        @media (max-width: 768px) {
+            flex-direction: column;
         }
 
-        .footer-privacy {
-            p {
-                color: $color-main;
-                font-size: 12px;
-                text-align: center;
-
-                @include md {
-                    text-align: left;
-                }
-
-                a {
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-family: $font-light;
-                    color: $color-main;
-                }
-            }
+        p {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-family: $font-second;
+            margin: 0;
         }
 
+        hr {
+            width: 43%;
+        }
 
+        button {
+            border: none;
+            background-color: transparent;
+        }
     }
 }
