@@ -1,6 +1,14 @@
 $(function() {
     
- 
+//preloader 
+setTimeout( () => {
+    $( ".preloader" ).animate({
+        opacity: 0
+      }, 1000, function() {
+        $( ".preloader" ).css('display', 'none');
+      });
+}, 500);
+
 
 //slider case studies 
 $('.case-studies-slider').slick({
