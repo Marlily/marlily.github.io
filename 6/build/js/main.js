@@ -1,4 +1,3 @@
-
 $(function() {
     
  
@@ -18,8 +17,6 @@ $('.case-studies-slider .slick-list').css('overflow', 'visible');
 
 
 // slides case studies number pagination
-
- 
 $(".case-studies .slide-number-all").text($('.case-studies .slick-slide').length);
 
 let changeNumberOfSlide = () => {
@@ -39,7 +36,6 @@ $('.case-studies .slick-next').click(changeNumberOfSlide);
 
 
 //slider opinions
-
 $('.opinions-slider').slick({
     centerMode: true,
     centerPadding: '60px',
