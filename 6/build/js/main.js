@@ -9,6 +9,7 @@ setTimeout( () => {
       });
 }, 500);
 
+document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
 
 //slider case studies 
 $('.case-studies-slider').slick({
