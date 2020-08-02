@@ -94,7 +94,38 @@ let changeNumberOfSlideOpinions = () => {
 
 $('.opinions-slider-arrow-left').click(changeNumberOfSlideOpinions);
 $('.opinions-slider-arrow-right').click(changeNumberOfSlideOpinions);
+$('.opinions-slider-dots ul.slick-dots li').click(changeNumberOfSlideOpinions);
 
+
+// brands carousel 
+$('.brands-items-wrapper').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: false,
+  autoplaySpeed: 1000,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        autoplay: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        autoplay: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 
 
 //mobile menu 
@@ -106,6 +137,38 @@ let menuMobile = () => {
 
 $('.mobile-btn').click( menuMobile );
 $('.nav .menu .menu-list li a').click( menuMobile );
+
+//smooth scroll
+$('a[href*="#"]').on('click', function (e) {
+  e.preventDefault()
+
+  $('html, body').animate(
+    {
+      scrollTop: $($(this).attr('href')).offset().top,
+    },
+    600,
+    'linear'
+  )
+})
+
+//language change
+$('.change-lang-menu .lang-en').click( () => {
+  $('.btn-lang-img').attr('src', 'build/images/norden-digital-uk.svg');
+})
+
+$('.change-lang-menu .lang-pl').click( () => {
+  $('.btn-lang-img').attr('src', 'build/images/norden-digital-pl.svg');
+})
+
+$('.btn-lang').click( () => {
+  $('.change-lang-menu').toggleClass('open');
+})
+
+//nav on scroll
+$( window).scroll( () => {
+
+    $( this ).scrollTop() > 0 ? $('.nav').addClass('nav-scrolled') : $('.nav').removeClass('nav-scrolled')
+})
 
 
 
