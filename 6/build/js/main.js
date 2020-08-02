@@ -165,6 +165,7 @@ $('.btn-lang').click( () => {
   $('.change-lang-menu').toggleClass('open');
 })
 
+
 //nav on scroll
 $( window).scroll( () => {
 
