@@ -92,9 +92,9 @@ let changeNumberOfSlideOpinions = () => {
       });
 }
 
-$('.opinions-slider-arrow-left').click(changeNumberOfSlideOpinions);
+$('.opinions-slider').click(changeNumberOfSlideOpinions);
 $('.opinions-slider-arrow-right').click(changeNumberOfSlideOpinions);
-$('.opinions-slider-dots ul.slick-dots li').click(changeNumberOfSlideOpinions);
+$('.opinions-slider-dots ul.slick-dots').click(changeNumberOfSlideOpinions);
 
 
 // brands carousel 
