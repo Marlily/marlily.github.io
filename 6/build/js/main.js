@@ -49,6 +49,7 @@ $('.opinions-slider').slick({
     slidesToShow: 3,
     dots: true,
     variableWidth: true,
+    swipe: false,
     appendDots: $('.opinions-slider-dots' ),
     prevArrow: $('.opinions-slider-arrow-left'),
     nextArrow: $('.opinions-slider-arrow-right'),
