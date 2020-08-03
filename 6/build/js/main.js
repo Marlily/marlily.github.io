@@ -45,6 +45,7 @@ $('.case-studies .slick-next').click(changeNumberOfSlide);
 //slider opinions
 $('.opinions-slider').slick({
     centerMode: true,
+    initialSlide: 0,
     centerPadding: '60px',
     slidesToShow: 3,
     dots: true,
@@ -171,6 +172,30 @@ $( window).scroll( () => {
 
     $( this ).scrollTop() > 0 ? $('.nav').addClass('nav-scrolled') : $('.nav').removeClass('nav-scrolled')
 })
+
+
+//typing h1
+let typing = () => {
+  $('.main-heading span').text('');
+
+  let typed = new Typed('.main-heading span', {
+    strings: [
+      "We listen", 
+      "We plan",
+      "We deliver"
+    ],
+    typeSpeed: 70,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: true,
+    showCursor: true,
+    
+  });
+}
+
+typing();
+
+
 
 
 
