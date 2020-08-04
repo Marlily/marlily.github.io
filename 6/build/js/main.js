@@ -10,36 +10,53 @@ setTimeout( () => {
 }, 500);
 
 //slider case studies 
-$('.case-studies-slider').slick({
+$('.case-studies-slide-text').slick({
     infinite: true,
     speed: 500,
+    swipe: false,
     fade: true,
-    cssEase: 'linear',
+    autoplay: true,
+    adaptiveHeight: true,
+    autoplaySpeed: 5000,
     prevArrow: $('.slick-prev'),
-    nextArrow: $('.slick-next')
+    nextArrow: $('.slick-next'),
+    asNavFor: '.case-studies-slide-img',
   });
 
-// change overflow of slick slider - image fit 
-$('.case-studies-slider .slick-list').css('overflow', 'visible');
+$('.case-studies-slide-img').slick({
+    infinite: true,
+    speed: 500,
+    fade: false,
+    autoplay: true,
+    swipe: false,
+    asNavFor: '.case-studies-slide-text',
+    prevArrow: $('.slick-prev'),
+    nextArrow: $('.slick-next'),
+    autoplaySpeed: 5000,
+
+});
 
 
 // slides case studies number pagination
-$(".case-studies .slide-number-all").text($('.case-studies .slick-slide').length);
+$(".case-studies .slide-number-all").text($('.case-studies-slide-text .slick-slide').length);
 
 let changeNumberOfSlide = () => {
 
-    $('.case-studies .slick-slide').each(function( index ) {
+    $('.case-studies-slide-text .slick-slide').each(function( index ) {
 
         if ( $( this ).is('.slick-active') ) {
             let actualSlide = index +1;
-            $(".case-studies .slide-number-actual").text( actualSlide );          
+            $(".case-studies .slide-number-actual").text( actualSlide );     
         }  
 
       });
 }
 
-$('.case-studies .slick-prev').click(changeNumberOfSlide);
-$('.case-studies .slick-next').click(changeNumberOfSlide);
+$('.case-studies-slide-text').on('afterChange', function(event, slick, currentSlide) {
+  let actualSlide = currentSlide +1;
+  $(".case-studies .slide-number-actual").text( actualSlide );
+
+});
 
 
 //slider opinions
@@ -78,36 +95,36 @@ $('.opinions-slider').slick({
 
  
 // slides opinions number pagination
-let numbersSlidesOpinions = $('.slick-slide').length;
-
 $(".opinions-slider-all").text($('.slick-dots li').length);
 
-let changeNumberOfSlideOpinions = () => {
+$('.opinions-slider').on('afterChange', function(event, slick, currentSlide) {
+  let actualSlide = currentSlide +1;
+  $(".opinions-slider-current").text( actualSlide );
 
-    $('.slick-dots li').each(function( index ) {
+});
 
-        if ( $( this ).is('.slick-active') ) {
-            let actualSlide = index +1;
-            $(".opinions-slider-current").text( actualSlide );          
-        }  
 
-      });
-}
 
-$('.opinions-slider').click(changeNumberOfSlideOpinions);
-$('.opinions-slider-arrow-right').click(changeNumberOfSlideOpinions);
-$('.opinions-slider-dots ul.slick-dots').click(changeNumberOfSlideOpinions);
-
+//opinions - fix bug with active slide
+$(window).on('resize', function(){
+  setTimeout( () => {
+    $('.opinions-slider').slick('setPosition');
+  }, 500);
+  
+});
 
 // brands carousel 
 $('.brands-items-wrapper').slick({
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 1000,
+  slidesToShow: 1,
+  autoplay: true,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  mobileFirst: true,
   responsive: [
+    
     {
-      breakpoint: 1200,
+      breakpoint: 768,
       settings: {
         autoplay: true,
         arrows: false,
@@ -117,13 +134,13 @@ $('.brands-items-wrapper').slick({
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 1200,
       settings: {
-        autoplay: true,
-        arrows: false,
+        autoplay: false,
+        slidesToShow: 6,
         centerMode: true,
-        centerPadding: '0',
-        slidesToShow: 1
+        
+      
       }
     }
   ]
@@ -140,30 +157,17 @@ let menuMobile = () => {
 $('.mobile-btn').click( menuMobile );
 $('.nav .menu .menu-list li a').click( menuMobile );
 
+
 //smooth scroll
 $('a[href*="#"]').on('click', function (e) {
   e.preventDefault()
 
   $('html, body').animate(
     {
-      scrollTop: $($(this).attr('href')).offset().top,
+      scrollTop: ($($(this).attr('href')).offset().top) - 70,
     },
-    600,
-    'linear'
+    500
   )
-})
-
-//language change
-$('.change-lang-menu .lang-en').click( () => {
-  $('.btn-lang-img').attr('src', 'build/images/norden-digital-uk.svg');
-})
-
-$('.change-lang-menu .lang-pl').click( () => {
-  $('.btn-lang-img').attr('src', 'build/images/norden-digital-pl.svg');
-})
-
-$('.btn-lang').click( () => {
-  $('.change-lang-menu').toggleClass('open');
 })
 
 
