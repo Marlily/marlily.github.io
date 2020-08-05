@@ -16,7 +16,7 @@ $('.case-studies-slide-text').slick({
     swipe: false,
     fade: true,
     autoplay: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     autoplaySpeed: 5000,
     prevArrow: $('.slick-prev'),
     nextArrow: $('.slick-next'),
@@ -109,6 +109,7 @@ $('.opinions-slider').on('afterChange', function(event, slick, currentSlide) {
 $(window).on('resize', function(){
   setTimeout( () => {
     $('.opinions-slider').slick('setPosition');
+    $('.brands-items-wrapper').slick('setPosition');
   }, 500);
   
 });
@@ -168,7 +169,18 @@ $('a[href*="#"]').on('click', function (e) {
     },
     500
   )
-})
+});
+
+$('a.logo').on('click', function (e) {
+  e.preventDefault()
+
+  $('html, body').animate(
+    {
+      scrollTop: 0,
+    },
+    500
+  )
+});
 
 
 //nav on scroll
