@@ -139,9 +139,7 @@ $('.brands-items-wrapper').slick({
       settings: {
         autoplay: false,
         slidesToShow: 6,
-        centerMode: true,
-        
-      
+        centerMode: true 
       }
     }
   ]
