@@ -104,7 +104,6 @@ $('.opinions-slider').on('afterChange', function(event, slick, currentSlide) {
 });
 
 
-
 //opinions - fix bug with active slide
 $(window).on('resize', function(){
   setTimeout( () => {
@@ -113,6 +112,7 @@ $(window).on('resize', function(){
   }, 500);
   
 });
+
 
 // brands carousel 
 $('.brands-items-wrapper').slick({
