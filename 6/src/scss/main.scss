@@ -1,0 +1,25 @@
+// import all styles
+
+// helpers
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+
+// base
+@import 'base/_normalize';
+@import 'base/_layout';
+@import 'base/_base';
+
+// components
+@import 'components/_preloader';
+@import 'components/_header';
+@import 'components/_nav';
+@import 'components/_about';
+@import 'components/_brands';
+@import 'components/_case-studies';
+@import 'components/_offer';
+@import 'components/_opinions';
+@import 'components/_work';
+@import 'components/_stack';
+@import 'components/_contact';
+@import 'components/_footer';
+

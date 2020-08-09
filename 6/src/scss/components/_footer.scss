@@ -1,0 +1,256 @@
+footer {
+    background-color: $color-back;
+    padding-top: 100px;
+
+    .footer-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .footer-item {
+            .footer-item-title {
+                margin: 0 0 40px;
+                color: $color-dark;
+                font-weight: 800;
+                font-size: 18px;
+            }
+        }
+
+        .footer-item1 {
+            width: 100%;
+            margin-bottom: 80px;
+            text-align: center;
+
+            @include md {
+                width: auto;
+                text-align: left;
+            }
+
+            .logo {
+                height: auto;
+                width: 180px;
+            }
+        }
+
+        .footer-item2 {
+            width: 100%;
+            text-align: center;
+
+            @include md {
+                width: auto;
+                text-align: left;
+            }
+
+            .footer-nav {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+
+                @include md {
+                    flex-direction: row;
+                    margin-bottom: 0;
+                }
+
+                .footer-list {
+                    list-style-type: none;
+                    margin: 0;
+
+                    li {
+                        margin: 0 0 15px;
+                    }
+
+                    &:first-of-type {
+
+
+                        @include md {
+                            margin-right: 50px;
+                        }
+                    }
+
+                    .footer-link {
+                        color: #6b6b6b;
+                        font-size: 14px;
+
+
+                        &:hover {
+                            color: $color-main;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .footer-item3 {
+            width: 100%;
+            text-align: center;
+
+            @include md {
+                width: auto;
+                text-align: left;
+            }
+
+            .footer-social-links {
+                display: flex;
+                justify-content: center;
+
+                @include md {
+                    justify-content: flex-start;
+                }
+
+                .footer-social-link {
+                    display: flex;
+                    cursor: pointer;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    border: 2px solid $color-main;
+                    width: 45px;
+                    height: 45px;
+
+                    &:not(:last-of-type) {
+                        margin-right: 12px;
+                    }
+
+                    .footer-social-icon {
+                        height: 15px;
+                        width: auto;
+                        display: inline-block;
+                    }
+
+                    &:hover {
+                        background-color: $color-main;
+
+                        .footer-social-icon {
+                            filter: brightness(0) invert(1);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .footer-item4 {
+            width: 100%;
+
+            @include md {
+                max-width: 30%;
+            }
+
+            .footer-info {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 40px;
+                justify-content: space-around;
+
+                @include md {
+                    margin-top: 0;
+                    justify-content: space-between;
+                }
+
+                .footer-address,
+                .footer-firm {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 30px;
+                    width: fit-content;
+
+
+                    @include md {
+                        text-align: left;
+                        width: 50%;
+                        margin-top: 0;
+                    }
+
+                    .footer-address-text {
+                        font-size: 13px;
+                        margin: 0;
+                        line-height: 1.8;
+                        width: fit-content;
+                        
+
+                        @include md {
+                            font-size: 13px;
+                        }
+
+                        span {
+                            color: $color-dark;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .footer-firm-text {
+                        width: fit-content;
+                        
+                    }
+                }
+
+                .footer-contact {
+                    margin: 40px auto 0;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+
+                    @include md {
+                        text-align: left;
+                        margin: 40px 0 0;
+                        width: auto;
+                    }
+
+
+                    .footer-tel {
+                        font-size: 24px;
+                        color: $color-dark;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $color-main;
+                        }
+                    }
+
+                    .footer-mail {
+                        color: #6b6b6b;
+                        margin-top: 10px;
+
+                        &:hover {
+                            color: $color-main;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .footer-copy {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 120px 0 50px;
+
+
+        @include md {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+
+        p {
+            font-size: 13px;
+            color: $color-text-footer;
+            text-align: center;
+
+            @include md {
+                text-align: left;
+            }
+
+            a {
+                color: $color-text-footer;
+            
+            }
+        }
+    }
+}

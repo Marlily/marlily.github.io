@@ -1,0 +1,297 @@
+.contact {
+    background-color: $color-section-bg;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    @include md {
+        padding-top: inherit;
+    }
+
+    .contact-items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .contact-item {
+            width: 100%;
+
+            @include md {
+                width: 50%;
+            }
+
+            &.contact-item1 {
+                @include container-left;
+                padding-top: 0;
+                padding-bottom: 100px;
+                text-align: center;
+
+                @include md {
+                    padding-top: 100px;
+                    padding-right: 80px;
+                    text-align: left;
+                }
+
+                .title-xl,
+                .title-text {
+                    text-align: center;
+                    padding: 0 20px;
+
+                    @include md {
+                        text-align: left;
+                        padding: 0;
+                    }
+                }
+
+                .title-text {
+                    color: $color-text2;
+                }
+
+                .contact-list {
+                    position: relative;
+                    margin: 65px 75px 0 14%;
+
+                    @include sm {
+                        margin: 65px 75px 0 20%;
+                    }
+
+                    @include md {
+                        margin: 65px 0 75px;
+                    }
+
+                    &::before {
+                        content: "";
+                        width: 1px;
+                        height: calc(100% - 20px);
+                        position: absolute;
+                        left: 6px;
+                        top: 6px;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        z-index: 0;
+                    }
+
+                    .contact-list-item {
+                        display: flex;
+                        margin-bottom: 60px;
+                        position: relative;
+
+                        .contact-list-text {
+                            margin: 0;
+                        }
+                    }
+
+                    .contact-list-circle {
+                        display: inline-block;
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 100px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        background-color: $color-back;
+                        margin: 6px 50px 3px 0;
+                        z-index: 1;
+                        position: absolute;
+                        left: 0;
+
+                        &.contact-list-circle-color {
+                            background-color: $color-main;
+                            border: 1px solid $color-main;
+                        }
+                    }
+
+                    .contact-list-text {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #727272;
+                        text-align: left;
+                       
+
+                        &.contact-list-text-color {
+                            color: $color-main;
+                            font-weight: 800;
+                            padding-left: 70px;
+                            margin-right: 7px;
+
+                            @include sm {
+                                padding-left: 50px;
+                            }
+                        }
+                    }
+
+                }
+
+                .contact-info {
+                    display: flex;
+                    flex-direction: column;
+
+                    .contact-tel {
+                        font-size: 28px;
+                        margin: 0 0 20px;
+                        color: $color-dark;
+                        font-size: 28px;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $color-main;
+                        }
+                    }
+
+                    .contact-mail {
+                        color: $color-text;
+                        font-size: 16px;
+                        font-weight: 400;
+                        opacity: 0.7;
+
+                        &:hover {
+                            color: $color-main;
+                        }
+                    }
+                }
+            }
+
+            &.contact-item2 {
+                padding-left: 20px;
+                padding-right: 20px;
+                @include container-right;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                background-color: $color-section-dark;
+                position: relative;
+                overflow: hidden;
+
+                @include md {
+                    padding-left: 80px;
+                    padding-right: calc((100vw - 992px) /2);
+                }
+
+                @include lg {
+                    padding-right: calc((100vw - 1200px) /2);
+
+                }
+
+                .contact-bg {
+                    width: 200%;
+                    height: 400px;
+                    background-image: url('../images/norden-digital-logo.svg');
+                    position: absolute;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    left: 20%;
+                    bottom: -315px;
+                    opacity: 0.12;
+                }
+
+                .contact-form {
+                    margin-top: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .contact-input {
+                        width: 100%;
+                        font-size: 17px;
+                        background-color: transparent;
+                        border: 1px solid #a5a5a5;
+                        border-radius: 0;
+                        padding: 19px 20px;
+                        color: $color-text-light;
+                        margin-bottom: 15px;
+                        font-family: $font-main; 
+
+                        &:focus,
+                        &:active {
+                            border: 1px solid $color-back;
+                            border-radius: 0;
+                            outline: none;
+                        }
+                    }
+
+                    textarea {
+                        font-family: $font-main;
+                        min-width: 100%;
+                        min-height: 150px;  
+                    }
+
+                    .field-file-wrapper {
+                        border: 1px solid #a5a5a5;
+                        cursor: pointer;
+                        padding: 11px;
+                        font-size: 13px;
+                        color: #a5a5a5;
+                        font-weight: 600;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0.7;
+                        min-width: min-content;
+                        white-space: nowrap;
+
+                        .file-icon {
+                            height: 16px;
+                            margin-right: 10px;
+                            opacity: 0.8;
+                        }
+
+                        .field-file {
+                            display: none;
+                        }
+
+                    }
+
+                    .contact-submit {
+                        border: none;
+                        @include btn;
+                        
+                        font-weight: 600;
+                    }
+
+                    .field-check-wrapper {
+                        font-size: 17px;
+                        margin-top: 10px;
+                        position: relative;
+                        width: 100%;
+                        display: block;
+                        cursor: pointer;
+                        color: rgba(255, 255, 255, 0.5);
+
+                        .field-check {
+                            opacity: 0;
+                            position: absolute;
+                        }
+
+                        .field-box {
+                            display: inline-flex;
+                            border: 1px solid $color-back;
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 8px;
+                            justify-content: center;
+                            align-items: center;
+                            color: $color-text2;
+
+                            img {
+                                opacity: 0;
+                                max-height: 97%;
+                                max-width: 97%;
+                                padding: 2px;
+                            }
+                        }
+
+                        .field-check:checked~.field-box>img {
+                            opacity: 1;
+                        }
+
+                        .check-policy {
+                            color: rgba(255, 255, 255, 0.5);
+                            text-decoration: underline;
+                        }
+                    }
+
+
+
+
+
+                }
+
+
+            }
+        }
+    }
+}

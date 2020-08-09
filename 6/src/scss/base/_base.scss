@@ -1,0 +1,128 @@
+// Base styles
+html {
+  overflow-x: hidden;
+
+}
+
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: 1.2;
+  @include reset;
+  color: $color-text;
+  background-color: $color-back;
+  overflow-x: hidden;
+  width: 100%;
+
+}
+
+section {
+  padding: 60px 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 800;
+  margin: 1.8em 0 0 0;
+  color: $color-text-light;
+}
+
+h2 {
+  @include title-xl;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 800;
+  color: $color-dark;
+}
+
+p {
+  margin: 1em 0 0 0;
+  color: $color-text;
+  font-weight: 400;
+  line-height: 1.6;
+
+  .bold,
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+h1+p,
+h2+p {
+  margin-top: 0.25em;
+}
+
+ul {
+  list-style-type: square;
+  padding: 0;
+  margin: 1em 0 1.5em 3em;
+}
+
+li {
+  padding: 0;
+  margin: 0.6em 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: $color-main;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-main;
+  }
+}
+
+a:link,
+a:visited {
+  font-weight: 400;
+  text-decoration: none;
+  color: $color-main;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $color-main;
+}
+
+//common 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 50px);
+
+  @include sm {
+    width: 750px;
+  }
+
+  @include md {
+    width: 970px;
+  }
+
+  @include lg {
+    width: 1170px;
+  }
+}
+
+.title-xl {
+  @include title-xl;
+}
+
+.title-text {
+  @include title-text;
+}
+
+.btn,
+a.btn {
+  @include btn;
+}

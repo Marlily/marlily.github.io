@@ -1,0 +1,40 @@
+// CSS Grid layout
+@mixin xl {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+
+@mixin sm {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+
+
+
+
+ 
+
+
+

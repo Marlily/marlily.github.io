@@ -1,0 +1,228 @@
+.opinions {
+    background-color: $color-main;
+    position: relative;
+
+    .title-xl,
+    .title-text {
+        text-align: center;
+    }
+
+    .title-text {
+        margin-bottom: 60px;
+    }
+
+    .opinions-slider {
+
+        .slick-list {
+            @include xl {
+                height: 650px;
+            }
+        }
+
+        .slick-slide {
+            padding: 20px;
+            width: 90vw;
+            height: 630px;
+            margin: 0 20px;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 300px) {
+                height: 590px;
+            }
+
+            @media (min-width: 330px) {
+                height: 540px;
+            }
+
+            @include xs {
+                padding: 40px;
+                width: 85vw;
+            }
+
+            @include sm {
+                padding: 40px;
+                width: 85vw;
+                height: 460px;
+            }
+
+            @include md {
+                padding: 60px;
+                width: 70vw;
+                height: 650px;
+            }
+
+            @include xl {
+                width: 65vw;
+            }
+
+            &.slick-current {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            &:not(.slick-current) {
+                opacity: 0.5;
+            }
+
+            .opinions-slider-text {
+                color: $color-text-light;
+                font-weight: 700;
+                font-size: 18px;
+
+                @include sm {
+                    font-size: 22px;
+                }
+
+                @include md {
+                    font-size: 28px;
+                }
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .opinions-slider-dots ul.slick-dots {
+        display: flex;
+        padding: 0;
+        margin: 3px auto;
+        width: min-content;
+        padding-left: 55px;
+        line-height: 1;
+
+        li {
+            width: 17px;
+            opacity: 0.31;
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+
+
+            button {
+                display: none;
+            }
+
+            &.slick-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .opinions-slider-arrows {
+        width: calc(90vw + 27px);
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        top: 56%;
+        transform: translate(-50%, 0);
+
+        @include xs {
+            width: calc(85vw + 31px);
+            top: 53%;
+        }
+
+        @include sm {
+            top: 52%;
+        }
+
+        @include md {
+            width: calc(70vw + 45px);
+            top: 50%;
+        }
+
+        @include xl {
+            width: calc(65vw + 45px);
+        }
+
+        .opinions-slider-arrow-left,
+        .opinions-slider-arrow-right {
+            width: 27px;
+            height: 27px;
+            background-color: $color-back;
+            border: none;
+            cursor: pointer;
+            transition: $transition;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include xs {
+                width: 30px;
+                height: 30px;
+            }
+
+            @include sm {
+                width: 50px;
+                height: 50px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+
+        }
+        .opinions-slider-arrow-left {
+            transform: translateX(-1.5px);
+
+            @include md {
+                transform: translateX(-3.5px);
+            }
+        }
+
+        .opinions-slider-arrow-right {
+            transform: translateX(1.5px);
+
+            @include md {
+                transform: translateX(3.5px);
+            }
+        }
+        
+    }
+
+    .opinions-slider-numbers {
+        text-align: center;
+        color: $color-text-light;
+        margin: 0;
+
+        .opinions-slider-current {
+            font-size: 17px;
+            margin-right: 4px;
+        }
+
+        .opinions-slider-all {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+    }
+
+    .opinions-slider-author {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 50px;
+        color: $color-text-light;
+    }
+
+    .opinions-slider-author2 {
+        color: $color-text-light;
+        opacity: 0.5;
+        margin-bottom: 30px;
+    }
+
+    .opinions-slider-logo {
+        height: 30px;
+
+        @include sm {
+            height: 50px;
+        }
+    }
+
+}

@@ -1,0 +1,98 @@
+.work {
+    padding-top: 100px;
+
+    .work-title-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+
+        @include sm {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        .title-xl {
+            margin-top: 0;
+        }
+
+        .work-btn {
+            border: 1px solid $color-main;
+            background-color: transparent;
+            color: $color-dark;
+            width: fit-content;
+            margin-top: 50px;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ::after {
+                border: 1px solid $color-main;
+            }
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+
+            @include sm {
+                margin-top: 12px;
+                margin-right: unset;
+                margin-left: unset;
+            }
+        }
+    }
+
+    .work-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 65px;
+
+        .work-item {
+            width: 100%;
+            background-color: $color-back;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            padding: 10px 30px 30px;
+            margin-bottom: 40px;
+            transition: border 0.3s;
+
+            &:hover {
+                border: 2px solid $color-main;
+            }
+
+            @include sm {
+                width: calc(50% - 20px);
+            }
+
+            @include lg {
+                width: calc(25% - 20px);
+                margin-bottom: 0;
+            }
+
+            .work-item-number {
+                font-size: 24px;
+                color: $color-main;
+                font-weight: 700;
+                margin-bottom: 60px;
+            }
+
+            .work-item-title {
+                font-weight: 700;
+                color: $color-dark;
+                font-size: 19px;
+                margin-bottom: 7px;
+            }
+
+            .work-item-text {
+                color: $color-text2;
+            }
+        }
+    }
+}
