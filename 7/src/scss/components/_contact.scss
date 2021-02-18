@@ -1,0 +1,161 @@
+.contact {
+    padding: 75px 0 70px;
+
+    @include lg {    
+        padding: 130px 0 140px;
+    }
+
+    .title-section {
+        width: 100%;
+        margin-bottom: 60px;
+
+        @include xl {
+            width: 50%;
+        }
+    }
+
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $color-back-white;
+
+        .form-wrapper,
+        .form-map {
+            width: 100%;
+
+            @include lg {
+                width: 50%;
+            }
+        }
+
+        .form-wrapper {
+            padding: 15px;
+
+            @include lg {
+                padding: 60px;
+            }
+
+            .form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                input,
+                textarea {
+                    padding: 18px 15px;
+                    display: inline-block;
+                    width: 100%;
+                    border: none;
+                    background-color: #f1f1f1;
+                    margin-top: 14px;
+
+                    &::placeholder {
+                        color: #848484;
+                        font-size: 14px;
+                    }
+
+                    &:focus,
+                    &:active {
+                        outline: none;
+                        border: none;
+                    }
+                }
+
+                .label-half {
+                    width: calc(50% - 10px);
+                }
+
+                .label-full {
+                    width: 100%;
+                }
+
+                label {
+                    color: $color-back-light;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    font-size: 14px;
+                }
+
+                textarea {
+                    width: 100%;
+                    min-height: 150px;
+                    max-height: 500px;
+                }
+
+                .check {
+                    display: flex;
+                    width: 100%;
+
+                    @include md {
+                        width: 50%;
+                    }
+                    
+                    input {
+                        width: 0;
+                    }
+
+                    label {
+                        position: relative;
+                        padding-left: 35px;
+                        cursor: pointer;
+
+                        &:before {
+                            content: ""; 
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                            border: 1px solid rgba(0,0,0,0.2);
+                            left: 0;
+                            top: 2px;
+                            font-size: 20px;
+                            padding-left: 2px;
+                        }
+                    }
+
+                    input:checked ~ label {
+                        &:before {
+                            content: "\2713";
+                        }
+                    }
+                }
+
+                .button {
+                    width: 150px;
+                    display: inline-block;
+                    border: none;
+                    background-color: $color-back-light;
+                    color: $color-text-light;
+                    font-size: 14px;
+                    padding: 20px 20px;
+                    margin: auto;
+                    margin-bottom: 30px;
+
+                    @include sm {
+                        margin: unset;
+                    }
+
+                    @include xl {
+                        width: 40%;
+                    }
+
+                    img {
+                        filter: brightness(0) invert(1);
+                        margin-left: 12px;
+                    }
+                } 
+            } 
+        }
+
+        .form-map {
+            background-image: url(../images/map.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 500px;
+            
+            @include lg {
+                padding-left: 30px;
+                height: auto;
+            }
+        }
+    }
+} 

@@ -1,0 +1,15 @@
+.section-bg {
+    padding: 50px 0;
+    background-image: url(../images/section-bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @include lg {
+        padding: 190px 0;
+    }
+
+    .arrow {
+        margin-top: 60px;
+        display: inline-block;
+    }
+}

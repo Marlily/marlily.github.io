@@ -1,0 +1,192 @@
+// Base styles
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 14px;
+  line-height: 1.2;
+  @include reset;
+  color: $color-text-light2;
+  background-color: $color-back-light;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-text-light;
+
+  &.title-dark {
+    color: $color-text-dark;
+  }
+}
+
+h1,
+.title-main {
+  font-size: 32px;
+  font-family: $font-bold;
+  font-weight: 700;
+  margin-bottom: 30px;
+
+  @include md {
+    font-size: 48px;
+  }
+}
+
+h2,
+.title-section {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: $font-medium;
+  margin-bottom: 30px;
+}
+
+h3,
+*.title-small {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: $font-semibold;
+}
+
+*.title-top {
+  margin-bottom: 15px;
+  color: $color-main;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+*.color {
+  color: $color-main;
+}
+
+p {
+  line-height: 24px;
+}
+
+p,
+a {
+  color: $color-text-light2;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $color-text-light2;
+    text-decoration: none;
+  }
+}
+
+.text-color {
+  color: $color-main;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+//lists 
+ul:not(.menu-list) {
+  list-style-type: none;
+  padding-left: 0;
+  
+  li::before {
+    content: "";
+    margin-right: 25px;
+    height: 14px;
+    width: 18px;
+    background-image: url(../images/icons/check.png);
+    display: inline-block;
+  }
+}
+
+//arrow
+.arrows-container {
+  display: flex; 
+
+  .arrow:first-of-type {
+    margin-right: 60px;
+  }
+}
+
+a.arrow, 
+.arrow {
+  color: $color-main;
+  font-size: 14px;
+  cursor: pointer;
+  transition: $transition;
+
+  img {
+    width: 22px;
+    margin-left: 23px;
+    transition: $transition;
+  }
+
+  &.arrow-white {
+    color: $color-text-light;
+    filter: brightness(0) invert(1);
+  }
+
+  &.arrow-left {
+    img {
+      transform: rotate(180deg);
+      margin-left: 0;
+      margin-right: 23px;      
+    }
+
+    &:hover {
+      img {
+        transform: rotate(180deg) translateX(4px);
+      }
+    }
+  }
+
+  &:hover {
+    img {
+      transform: translateX(4px);
+    }
+  }
+}
+ 
+.arrows-slider {
+  .arrow {
+    span {
+      display: none;
+  
+      @include xl {
+        display: inline;
+      }
+    }
+
+    img {
+      margin-left: 0;
+  
+      @include xl {
+        margin-left: 23px;
+      }
+    }
+
+    &.arrow-left {
+      img {
+        margin-left: 0;
+        margin-right: 0;
+  
+        @include xl {
+          margin-right: 23px;
+        }
+        
+      }
+    }
+  }
+}
+
+
+
+ 

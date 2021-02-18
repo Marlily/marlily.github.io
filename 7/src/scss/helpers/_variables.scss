@@ -1,0 +1,46 @@
+// Global Sass variables
+
+//fonts
+@font-face {
+    font-family: "Sofia Pro Regular";
+    src: url("fonts/sofia/Sofia Pro Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Sofia Pro Medium";
+    src: url("fonts/sofia/Sofia Pro Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Sofia Pro SemiBold";
+    src: url("fonts/sofia/Sofia Pro SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Sofia Pro Bold";
+    src: url("fonts/sofia/Sofia Pro Bold.ttf");
+    font-weight: 700;
+}
+
+
+$font-main: "Sofia Pro Regular";
+$font-bold: "Sofia Pro Bold";
+$font-semibold: "Sofia Pro SemiBold";
+$font-medium: "Sofia Pro Medium";
+
+// colors
+$color-back-light: #232323;
+$color-back-dark: #111111;
+$color-back-white: #fff;
+$color-text-light: #fff;
+$color-text-light2: #cccccc;
+$color-text-light3: #fefefe;
+$color-text-dark: #3f3f3f;
+$color-main: #e42d27;
+
+//transitions
+$transition: all 0.5s;
+
