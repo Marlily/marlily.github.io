@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 17px;
+    font-family: $font-main;
+    line-height: 1.7;
+    color: $color-dark;
+}
+
+a {
+    text-decoration: none;
+    color: $color-second;
+}
+
+// titles
+h1.title1,
+.title1,
+h2.title2,
+.title2 {
+    font-size: 3.88em;
+    font-family: $font-deco;
+    color: $color-white;
+    font-weight: 500;
+
+    span {
+        color: $color-second;
+    }
+}
+
+h1.title1,
+.title1 {
+    font-size: 7em;
+    line-height: 1;
+    color: $color-main;
+}
+
+h1.title2,
+.title2 {
+    font-size: 3.88em;
+    line-height: 1;
+}
+
+.smallTitle,
+p.smallTitle {
+    font-size: 1.8em;
+}
+
+// buttons
+a.btn,
+.btn {
+    background-color: $color-second;
+    color: $color-white;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 11px;
+    border: 2px solid $color-second;
+    border-radius: 100px;
+    min-width: 160px;
+    display: inline-block;
+    text-align: center;
+    transition: $transition;
+
+    .btn--big {
+        font-size: 1.8em;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $color-second;
+    }
+}

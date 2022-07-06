@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Monda";
+  src: url(../../fonts/Monda-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monda";
+  src: url(../fonts/Monda-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Staatliches";
+  src: url(../fonts/Staatliches-Regular.ttf);
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  font-family: "Monda", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  color: #9913e1;
+  text-decoration: none;
+}
+
+.btn,
+a.btn,
+input.btn,
+button.btn {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #9913e1;
+  font-weight: 700;
+  padding: 18px 60px;
+  border: 4px solid #9913e1;
+  background-color: transparent;
+  border-radius: 25px;
+}
+
+.btn .btn-light,
+a.btn .btn-light,
+input.btn .btn-light,
+button.btn .btn-light {
+  color: #e0e0e0;
+  border: 4px solid #e0e0e0;
+}
+
+p b {
+  color: #9913e1;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+h2.heading-big,
+h3.heading-big,
+.heading-big {
+  font-family: "Staatliches", cursive;
+  color: #000;
+}
+
+h2.heading-big span,
+h3.heading-big span,
+.heading-big span {
+  color: #9913e1;
+}
+
+h2.heading-big .heading-light span,
+h3.heading-big .heading-light span,
+.heading-big .heading-light span {
+  color: #e0e0e0;
+}
+
+.heading-bg-1, .heading-bg-2,
+h1.heading-bg-1, h1.heading-bg-2,
+h2.heading-bg-1, h2.heading-bg-2,
+h3.heading-bg-1, h3.heading-bg-2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #e0e0e0;
+  display: inline-block;
+  padding: 4px 10px 7px;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+.heading-bg-2,
+h1.heading-bg-2,
+h2.heading-bg-2,
+h3.heading-bg-2 {
+  background-color: #9913e1;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e0e0e0;
+}
+
+.header .header-left {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .header .header-left {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .header .header-left .menu-btn {
+    display: none;
+  }
+}
+
+.header .header-left .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .header-left .menu ul.menu-list {
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header-left .menu ul.menu-list li.menu-item {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.header .header-left .menu ul.menu-list li.menu-item a {
+  color: #000;
+}
+
+.header .header-left .menu ul.menu-list li.menu-item.active a {
+  color: #9913e1;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@media (min-width: 992px) {
+  .header .header-left .menu ul.menu-list li.menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header .header-right {
+  display: none;
+  background-image: url(../images/header-img.jpg);
+}
+
+@media (min-width: 992px) {
+  .header .header-right {
+    width: 30%;
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */

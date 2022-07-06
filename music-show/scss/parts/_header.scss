@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    background-color: $color-light;
+
+    .header-left {
+        width: 100%; 
+
+        @include lg {
+            width: 70%;
+        }
+
+        .menu-btn {
+            @include lg {
+                display: none;
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+
+            ul.menu-list {
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+
+                li.menu-item {
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    
+                    a {
+                        color: $color-dark; 
+                    }
+
+                    &.active {
+                        a {
+                            color: $color-main; 
+                            font-weight: $font-bold;
+                            font-size: 24px;
+                        }
+                    }
+
+                    @include lg {
+                        &:not(:last-child) {
+                            margin-right: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-right {
+        display: none;
+        background-image: url(../images/header-img.jpg);
+
+        @include lg {
+            width: 30%;
+            display: block;
+        }
+    }
+}

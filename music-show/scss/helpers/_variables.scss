@@ -1,0 +1,29 @@
+// fonts
+@font-face {
+    font-family: "Monda";
+    src: url(../../fonts/Monda-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Monda";
+    src: url(../fonts/Monda-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Staatliches";
+    src: url(../fonts/Staatliches-Regular.ttf);
+    font-weight: 700;
+}
+
+$font-family-text: "Monda", sans-serif;
+$font-family-headings: "Staatliches", cursive;
+$font-size-base: 18px;
+$font-bold: 700;
+$font-normal: 400;
+
+// colors
+$color-main: #9913e1;
+$color-dark: #000;
+$color-light: #e0e0e0;

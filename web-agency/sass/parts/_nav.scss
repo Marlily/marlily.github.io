@@ -1,0 +1,92 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    padding: 15px 25px;
+    background-color: $mask;
+
+    @include md {
+        padding: 20px 50px;
+        background-color: transparent;
+    }
+
+    
+
+    .collapse {
+        justify-content: flex-end;
+    }
+
+    a.navbar-brand {
+        color: $color-white;
+        font-size: 2.3em;
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+        
+        &:active,
+        &:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            width: auto;
+            height: 30px;
+
+            & > span {
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background-color: $color-white;
+                border-radius: 100%;
+                transition: all 0.5s;
+            }
+        } 
+
+        &[aria-expanded="true"] {
+            .navbar-toggler-icon > span {
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        color: $color-white;
+
+        .nav-item {
+            margin-left: 50px;
+            position: relative;
+            text-align: right;
+
+            @include lg {
+                text-align: left; 
+            }
+
+            &:not(.nav-icon) {
+                &::before {
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 100%;
+                    position: absolute;
+                    background-color: $color-white;
+                    left: -15px;
+                    top: calc(50% - 4px);
+                    opacity: 0;
+
+                    @include lg {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            a.nav-link {
+                color: $color-white;
+            }
+        }
+    }
+}
