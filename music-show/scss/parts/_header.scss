@@ -1,6 +1,21 @@
 .header {
     display: flex;
     background-color: $color-light;
+    position: relative;
+
+    &::before {
+        content: url(../img/header-paper.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::after {
+        content: url(../img/header-bg.png);
+        position: absolute;
+        top: 0;
+        left: 18%;
+    }
 
     .header-left {
         width: 100%; 
@@ -9,20 +24,53 @@
             width: 70%;
         }
 
-        .menu-btn {
-            @include lg {
-                display: none;
-            }
-        }
-
         .menu {
             display: flex;
             justify-content: space-between;
+            padding: 110px 50px 70px 90px;
+
+            .logo {
+                height: 77px;
+            }
+
+            button.menu-btn {
+                border: none;
+                outline: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                background-color: $color-dark;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                span {
+                    width: 90%;
+                    height: 3px;
+                    background-color: $color-light;
+                    display: block;
+                    margin: 3px 0;
+                }
+
+                @include lg {
+                    display: none;
+                }
+            }
 
             ul.menu-list {
-                padding: 0;
                 list-style-type: none;
-                display: flex;
+                display: none;
+
+                &.show {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                @include lg {
+                    display: flex;
+                }
 
                 li.menu-item {
                     text-transform: uppercase;
@@ -32,13 +80,14 @@
                     
                     a {
                         color: $color-dark; 
+                        font-size: 20px;
                     }
 
                     &.active {
                         a {
                             color: $color-main; 
                             font-weight: $font-bold;
-                            font-size: 24px;
+                            font-size: 24.6px;
                         }
                     }
 
@@ -49,12 +98,63 @@
                     }
                 }
             }
+        } 
+
+        .header-title {
+            text-align: center;
+            position: relative;
+
+            .header-title--img {
+                height: 278px;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 40px;
+            }
+
+            .header-shape {
+                height: 342px;
+                position: absolute;
+                left: calc(50% + 60px);
+                top: -26px;
+                z-index: 0;
+            }
+
+            .header-text {
+                display: flex;
+                flex-wrap: wrap;
+
+                width: 520px;
+                margin: auto;
+
+                .heading-bg-1,
+                .heading-bg-2 {
+                    margin: 0;
+                }
+    
+                .heading-bg-2 {
+                    margin-left: auto;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+
+        .header-scroll {
+            position: absolute;
+            bottom: 90px;
+            left: 90px;
+            height: 112px;
         }
     }
 
     .header-right {
         display: none;
-        background-image: url(../images/header-img.jpg);
+        background-image: url(../img/header-img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
 
         @include lg {
             width: 30%;

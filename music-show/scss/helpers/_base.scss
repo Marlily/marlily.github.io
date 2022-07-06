@@ -3,6 +3,7 @@ body {
     font-family: $font-family-text;
     font-size: $font-size-base;
     font-weight: $font-normal;
+    line-height: 1.2;
 }
 
 // links
@@ -76,7 +77,7 @@ h1.heading-bg-2,
 h2.heading-bg-2,
 h3.heading-bg-2 {
     background-color: $color-main;
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
 }
 
 //images
