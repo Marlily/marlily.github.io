@@ -1,0 +1,131 @@
+.slider-text {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-light;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: url(../img/slider-paper.png);
+        position: absolute;
+        left: -100px;
+        top: -100px;
+
+        @include lg {
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .slider-text--wrapper,
+    .slider-text--img {
+        width: 100%;
+
+        @include lg {
+            width: 50%;
+        }
+    }
+
+    .slider-text--wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../img/events-shape.png) no-repeat;
+        background-position: center 20%;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        z-index: 9;
+
+        @include lg {
+            padding-top: 280px;
+            padding-bottom: 120px;
+            background-position: center 35%;
+        }
+
+        .tns-outer {
+            width: 100%;
+
+            .slider-text--slider-item {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+
+                .heading-bg-1 {
+                    margin-top: 30px;
+                }
+
+                .heading-bg-2 {
+                    margin-left: 60px;
+                    margin-top: 0;
+                }
+
+                p {
+                    max-width: 410px;
+                    margin: auto;
+                }
+
+                p.slider-text--slider-p {
+                    margin-top: 30px;
+                    margin-bottom: 65px;
+                }
+
+                .btn {
+                    margin-bottom: 50px;
+
+                    @include lg {
+                        margin-bottom: 100px;
+                    }
+                }
+
+
+
+            }
+        }
+
+        .slider-text--arrows {
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+
+            @include md {
+                width: 300px;
+            }
+
+            @include xl {
+                width: 410px;
+            }
+
+            img {
+                width: 30px;
+
+                @include lg {
+                    width: 52px;
+                }
+            }
+
+            .slider-text--arrows-prev {
+                margin-left: 30px;
+            }
+
+            .slider-text--arrows-next {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .slider-text--img {
+        display: none;
+
+        @include lg {
+            display: block;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+}

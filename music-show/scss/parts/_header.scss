@@ -2,6 +2,7 @@
     display: flex;
     background-color: $color-light;
     position: relative;
+    overflow: hidden;
 
     &::before {
         content: url(../img/header-paper.png);
@@ -18,19 +19,29 @@
     }
 
     .header-left {
-        width: 100%; 
+        width: 100%;
 
-        @include lg {
+        @include xl {
             width: 70%;
         }
 
         .menu {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            padding: 110px 50px 70px 90px;
+            padding: 50px 30px 50px 30px;
+
+            @include lg {
+                padding: 110px 50px 70px 90px;
+            }
 
             .logo {
-                height: 77px;
+                z-index: 3;
+
+                img {
+                    height: 77px;
+                }
+
             }
 
             button.menu-btn {
@@ -45,6 +56,7 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
+                z-index: 999;
 
                 span {
                     width: 90%;
@@ -61,33 +73,66 @@
 
             ul.menu-list {
                 list-style-type: none;
-                display: none;
-
-                &.show {
-                    display: flex;
-                    flex-direction: column;
-                }
+                left: -100vw;
+                transition: left 0.4s;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                left: -100vw;
+                height: 100vh;
+                width: 100%;
+                top: 0;
+                padding-top: 40px;
+                background-color: $color-main;
+                width: calc(100% - 112px);
+                margin: 0;
+                z-index: 9999;
 
                 @include lg {
+                    padding-top: unset;
+                    background-color: transparent;
                     display: flex;
+                    position: static;
+                    flex-direction: row;
+                    width: auto;
+                    height: auto;
                 }
 
                 li.menu-item {
                     text-transform: uppercase;
                     display: flex;
                     align-items: center;
-                    padding: 10px;
-                    
+                    padding: 15px 0;
+                    margin-left: -100vw;
+
+                    @include lg {
+                        padding: 10px;
+                        margin-left: unset;
+                    }
+
                     a {
-                        color: $color-dark; 
-                        font-size: 20px;
+                        color: $color-light;
+                        font-size: 30px;
+
+                        @include lg {
+                            color: $color-dark;
+                            font-size: 20px;
+                        }
                     }
 
                     &.active {
                         a {
-                            color: $color-main; 
                             font-weight: $font-bold;
-                            font-size: 24.6px;
+
+                            &::before {
+                                content: "• ";
+                            }
+    
+                            @include lg {
+                                &::before {
+                                    display:  none;
+                                }
+                            }
                         }
                     }
 
@@ -97,57 +142,73 @@
                         }
                     }
                 }
-            }
-        } 
 
-        .header-title {
-            text-align: center;
+                &.collapsed {
+                    left: 0;
+
+                    li.menu-item {
+                        animation: showLi 0.5s forwards;
+                    }
+
+                    @keyframes showLi {
+                        100% {
+                            margin-left: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .header-title {
+        text-align: center;
+        position: relative;
+
+        .header-title--img {
+            height: 278px;
             position: relative;
-
-            .header-title--img {
-                height: 278px;
-                position: relative;
-                z-index: 1;
-                margin-bottom: 40px;
-            }
-
-            .header-shape {
-                height: 342px;
-                position: absolute;
-                left: calc(50% + 60px);
-                top: -26px;
-                z-index: 0;
-            }
-
-            .header-text {
-                display: flex;
-                flex-wrap: wrap;
-
-                width: 520px;
-                margin: auto;
-
-                .heading-bg-1,
-                .heading-bg-2 {
-                    margin: 0;
-                }
-    
-                .heading-bg-2 {
-                    margin-left: auto;
-                    margin-bottom: 30px;
-                }
-
-                p {
-                    margin-bottom: 90px;
-                }
-            }
+            z-index: 1;
+            margin-bottom: 40px;
         }
 
-        .header-scroll {
+        .header-shape {
+            height: 342px;
             position: absolute;
-            bottom: 90px;
-            left: 90px;
-            height: 112px;
+            left: calc(50% + 60px);
+            top: -26px;
+            z-index: 0;
         }
+
+        .header-text {
+            display: flex;
+            flex-wrap: wrap;
+
+            width: 520px;
+            margin: auto;
+
+            .heading-bg-1,
+            .heading-bg-2 {
+                margin: 0;
+            }
+
+            .heading-bg-2 {
+                margin-left: auto;
+                margin-bottom: 30px;
+            }
+
+            p {
+                margin-bottom: 90px;
+            }
+        }
+    }
+
+    .header-scroll {
+        position: absolute;
+        bottom: 90px;
+        left: 90px;
+        height: 112px;
+
     }
 
     .header-right {
@@ -156,7 +217,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        @include lg {
+        @include xl {
             width: 30%;
             display: block;
         }

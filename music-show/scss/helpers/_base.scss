@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: $font-family-text;
@@ -21,23 +25,37 @@ button.btn {
     text-transform: uppercase;
     color: $color-main;
     font-weight: $font-bold;
-    padding: 18px 60px;
+    padding: 12px 60px;
     border: 4px solid $color-main;
     background-color: transparent;
-    border-radius: 25px;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
 
-    .btn-light {
+    &.btn-light {
         color: $color-light;
         border: 4px solid $color-light;
+    }
+
+    &.btn-light-full {
+        background-color: $color-light;
     }
 }
 
 // text
 p {
+    margin: 0 0 25px;
+    vertical-align: baseline;
+
     b {
         color: $color-main;
         font-weight: $font-bold;
         font-size: 20px;
+    }
+
+    span.p-light {
+        color: $color-light;
     }
 }
 
@@ -47,15 +65,21 @@ h3.heading-big,
 .heading-big {
     font-family: $font-family-headings;
     color: $color-dark;
+    font-size: 75px;
+    line-height: 84px;
+    margin: 0;
+
+    @include xl {
+        font-size: 96px;
+        line-height: 92px;
+    }
 
     span {
         color: $color-main;  
     }
 
-    .heading-light {
-        span {
+    span.heading-light {
             color: $color-light;  
-        }
     }
 }
 
@@ -70,6 +94,8 @@ h3.heading-bg-1, h3.heading-bg-2 {
     display: inline-block;
     padding: 4px 10px 7px;
     transform: rotate(-6deg);
+    display: inline-block;
+    text-align: center;
 }
 
 .heading-bg-2,
@@ -85,4 +111,29 @@ img {
     max-width: 100%;
 }
 
-// arrows
+//arrows
+.arrow-prev,
+ .arrow-next {
+    width: 30px;
+    cursor: pointer;
+    transition: filter 0.5s, opacity 0.5s;
+
+    &[aria-disabled="true"] {
+        opacity: 0.4;
+        filter: grayscale(1);
+    }
+
+    @include lg {
+        width: 50px;
+    }
+ }
+
+.arrow-prev {
+    transform: rotate(90deg);
+    margin-left: 30px;
+}
+
+.arrow-next {
+    transform: rotate(-90deg);
+    margin-right: 30px;
+}

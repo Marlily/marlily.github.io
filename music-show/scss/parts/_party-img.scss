@@ -1,0 +1,91 @@
+.party-img {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .party-img--img,
+    .party-img--text {
+        width: 100%;
+
+        @include lg {
+            width: 50%;
+        }
+    }
+
+    .party-img--img {
+        max-height: 400px;
+
+        @include lg {
+            max-height: 825px;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            object-position: center;
+        }
+    }
+
+    .party-img--text {
+        position: relative;
+        background-color: $color-main;
+        padding: 200px 75px 130px 60px;
+
+        @include xl {
+            padding: 255px 75px 130px 150px;
+        }
+
+        &::before {
+            content: "";
+            background: url(../img/party-paper.png) no-repeat ;
+            background-size: contain;
+            position: absolute;
+            width: 90px;
+            height: 90%;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            
+        }
+
+        .party-img--arrows {
+            position: absolute;
+            top: 70px;
+            left: 30px;
+            height: 120px;
+
+            @include lg {
+                left: 70px;
+                height: 159px;
+            }
+        }
+
+        .heading-big  {
+            margin-bottom: 65px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            position: relative;
+
+            @include lg {
+                width: 410px;
+            }
+
+            .party-img--arrow {
+                position: absolute;
+                bottom: -200px;
+                right: 0;
+                height: 110px;
+
+                @include lg {
+                    height: 164px;
+                }
+            }
+            
+        }
+
+    }
+}

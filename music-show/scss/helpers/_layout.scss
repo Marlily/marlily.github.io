@@ -26,3 +26,23 @@
       @content;
     }
   }
+
+  .container {
+    width: 100%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include md {
+      width: 720px;
+    }
+
+    @include lg {
+      width: 960px;
+    }
+
+    @include xl {
+      width: 1015px;
+    }
+
+  }
