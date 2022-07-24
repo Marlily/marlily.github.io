@@ -30,7 +30,11 @@
     .party-img--text {
         position: relative;
         background-color: $color-main;
-        padding: 200px 75px 130px 60px;
+        padding: 100px 75px 80px 40px;
+
+        @include md {
+            padding: 200px 75px 130px 60px;
+        }
 
         @include xl {
             padding: 255px 75px 130px 150px;
@@ -43,18 +47,28 @@
             position: absolute;
             width: 90px;
             height: 90%;
-            right: -14px;
+            right: -30px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 1;
+
+            @include md {
+                right: -14px;
+            }
             
         }
 
         .party-img--arrows {
             position: absolute;
-            top: 70px;
-            left: 30px;
-            height: 120px;
+            top: 20px;
+            left: 20px;
+            height: 80px;
+
+            @include md {
+                top: 70px;
+                left: 30px;
+                height: 120px;
+            }
 
             @include lg {
                 left: 70px;
@@ -63,7 +77,11 @@
         }
 
         .heading-big  {
-            margin-bottom: 65px;
+            margin-bottom: 40px;
+
+            @include md {
+                margin-bottom: 65px;
+            }
         }
 
         p {
@@ -78,7 +96,11 @@
                 position: absolute;
                 bottom: -200px;
                 right: 0;
-                height: 110px;
+                height: 77px;
+
+                @include md {
+                    height: 110px;
+                }
 
                 @include lg {
                     height: 164px;

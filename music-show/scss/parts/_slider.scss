@@ -8,8 +8,8 @@
     &::before {
         content: url(../img/slider-paper.png);
         position: absolute;
-        left: -100px;
-        top: -100px;
+        left: -150px;
+        top: -130px;
 
         @include lg {
             left: 0;
@@ -36,11 +36,15 @@
         padding-top: 100px;
         padding-bottom: 60px;
         z-index: 9;
+        background-size: 60%;
+        padding-left: 10px;
+        padding-right: 10px;
 
         @include lg {
             padding-top: 280px;
             padding-bottom: 120px;
             background-position: center 35%;
+            background-size: auto;
         }
 
         .tns-outer {

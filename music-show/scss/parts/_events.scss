@@ -1,5 +1,5 @@
 .events {
-    padding:  100px 0 125px;
+    padding:  70px 0 80px;
     background-image: url(../img/events-paper.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -34,7 +34,11 @@
         width: 100%;
         justify-content: flex-end;
         align-items: center;
-        margin-bottom: 70px;
+        margin-bottom: 30px;
+
+        @include lg {
+            margin-bottom: 70px;
+        }
 
         .events-arrow--num {
             font-family: $font-family-text;

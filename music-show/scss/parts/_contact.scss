@@ -39,6 +39,14 @@
                 width: 135px;
             }
         }
+
+        .heading-big {
+            text-align: center;
+
+            @include lg {
+                text-align: left;
+            }
+        }
         
         form {
             margin-top: 40px;
@@ -70,6 +78,11 @@
                     background-color: $color-light;
                     color: $color-main;
                     padding: 8px 30px;
+
+                    &:hover {
+                        background-color: $color-main;
+                        color: $color-light;
+                    }
                 }
             }
 

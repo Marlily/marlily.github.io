@@ -7,8 +7,13 @@
     &::before {
         content: url(../img/header-paper.png);
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -91px;
+        left: -37px;
+
+        @include lg {
+            top: 0;
+            left: 0;
+        }
     }
 
     &::after {
@@ -20,6 +25,28 @@
 
     .header-left {
         width: 100%;
+
+        &::before {
+            //transition: all 0.1s;
+            content: "";
+            width: 200vw;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            background: $color-light;
+            opacity: 0;
+            
+        }
+
+        &.shadow {
+            &::before {
+                opacity: 1;
+            }
+
+        }
 
         @include xl {
             width: 70%;
@@ -39,7 +66,11 @@
                 z-index: 3;
 
                 img {
-                    height: 77px;
+                    height: 67px;
+
+                    @include lg {
+                        height: 77px;
+                    }
                 }
 
             }
@@ -56,7 +87,7 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
-                z-index: 999;
+                z-index: 9999;
 
                 span {
                     width: 90%;
@@ -64,8 +95,27 @@
                     background-color: $color-light;
                     display: block;
                     margin: 3px 0;
+                    transition: all 0.5s;
                 }
 
+                &.open {
+                    z-index: 99999;
+
+                    span:first-child {
+                        transform: rotate(45deg) translate(7px, 6px);
+                    }
+
+                    span:nth-child(2) {
+                        transform: translateX(-100vw)
+                    }
+
+                    span:last-child {
+                        transform: rotate(-45deg) translate(7px, -6px);
+                    }
+
+                }
+
+                
                 @include lg {
                     display: none;
                 }
@@ -80,13 +130,23 @@
                 flex-direction: column;
                 left: -100vw;
                 height: 100vh;
-                width: 100%;
                 top: 0;
                 padding-top: 40px;
                 background-color: $color-main;
-                width: calc(100% - 112px);
+                width: calc(100% - 120px);
                 margin: 0;
                 z-index: 9999;
+                box-shadow: 3px 0px 8px 1px rgba(0,0,0,0.2);
+
+                &::before {
+                    content: url(../img/team-paper-right.png);
+                    position: absolute;
+                    height: 100%;
+                    width: 90px;
+                    top: -32px;
+                    right: -10px;
+                    filter: brightness(1) invert(1);
+                }
 
                 @include lg {
                     padding-top: unset;
@@ -96,6 +156,11 @@
                     flex-direction: row;
                     width: auto;
                     height: auto;
+
+                    &::before {
+                        display: none;
+                    }
+    
                 }
 
                 li.menu-item {
@@ -145,6 +210,7 @@
 
                 &.collapsed {
                     left: 0;
+                    overflow: hidden;
 
                     li.menu-item {
                         animation: showLi 0.5s forwards;
@@ -166,10 +232,14 @@
         position: relative;
 
         .header-title--img {
-            height: 278px;
+            height: 208px;
             position: relative;
             z-index: 1;
             margin-bottom: 40px;
+
+            @include lg {
+                height: 278px;
+            }
         }
 
         .header-shape {
@@ -183,9 +253,12 @@
         .header-text {
             display: flex;
             flex-wrap: wrap;
-
-            width: 520px;
+            width: 80%;
             margin: auto;
+
+            @include lg {
+                width: 520px;
+            }
 
             .heading-bg-1,
             .heading-bg-2 {
@@ -205,9 +278,15 @@
 
     .header-scroll {
         position: absolute;
-        bottom: 90px;
-        left: 90px;
-        height: 112px;
+        bottom: 20px;
+        left: 20px;
+        height: 70px;
+
+        @include lg {
+            height: 112px;
+            bottom: 90px;
+            left: 90px;
+        }
 
     }
 

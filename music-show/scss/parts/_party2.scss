@@ -1,7 +1,11 @@
 .party2 {
     position: relative;
     background-color: $color-light;
-    padding: 150px 0;
+    padding: 70px 0;
+
+    @include lg {
+        padding: 150px 0;
+    }
 
     img.party2-shape1,
     img.party2-shape2 {

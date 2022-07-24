@@ -84,6 +84,10 @@
                 bottom: -30px;
                 right: -50px;
                 z-index: -1;
+
+                @include lg {
+                    width: 420px;
+                }
             }
         }
 
@@ -111,7 +115,7 @@
             position: relative;
             width: 200%;
             height: 225px;
-            left: 0;
+            left: -50px;
 
             @include lg {
                 left: -100%;

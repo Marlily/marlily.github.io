@@ -1,8 +1,12 @@
 .team {
     background-color: $color-light;
     overflow: hidden;
-    padding: 260px 0 190px;
+    padding: 60px 0 70px;
     position: relative;
+
+    @include lg {
+        padding: 260px 0 190px;
+    }
 
     .team-bg-img {
         position: absolute;
@@ -44,7 +48,7 @@
         max-width: 600px;
         margin: auto;
         text-align: center;
-        width: 60%;
+        width: 80%;
 
         @include lg {
             width: auto;
@@ -57,8 +61,13 @@
                 transition-delay: 0.3s;
 
                 img.team-symbol {
-                    height: 90px;
-                    margin-bottom: 45px;
+                    height: 50px;
+                    margin-bottom: 30px;
+
+                    @include md {
+                        height: 90px;
+                        margin-bottom: 45px;
+                    }
                 }
 
                 .team-name {
@@ -77,7 +86,7 @@
             display: flex;
             justify-content: space-between;
             margin: auto;
-            width: 78%;
+            width: 90%;
             left: 50%;
             transform: translate(-50%, -50%);
 

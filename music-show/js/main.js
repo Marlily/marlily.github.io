@@ -29,12 +29,15 @@ setTimeout(function(){
 document.querySelector('.menu-btn').addEventListener('click', (e) => {
     document.querySelector('.menu-btn').classList.toggle('open');
     document.querySelector('ul.menu-list').classList.toggle('collapsed');
+    document.querySelector('.header-left').classList.toggle('shadow');
 
     if(document.querySelector('.menu-btn').classList.contains("open")) {
         document.body.style.overflow = "hidden";
     } else {
         document.body.style.overflow = "unset";
     }
+
+
 });
 
 let itemsMenu = document.querySelectorAll("li.menu-item");
@@ -46,6 +49,8 @@ for(let i of itemsMenu) {
     i.style.animationDelay = delay + 'ms';
     delay+= 100;
 }
+
+
     
 // sliders 
 var slider = tns({
@@ -58,7 +63,8 @@ var slider = tns({
     touch: true,
     autoplayButton: false,
     autoplayButtonOutput: false,
-    speed: 100,
+    autoplayTimeout: 1400,
+    speed: 500,
     gutter: 15,
     mouseDrag: true,
     responsive: {
@@ -80,6 +86,7 @@ var slider = tns({
     autoplayButtonOutput: false,
     autoplayTimeout: 4000,
     speed: 500,
+    gutter: 30,
     controlsContainer: '.slider-text--arrows',
 
 });
