@@ -327,9 +327,6 @@ body.show-overlay .overlay img.overflow-logo {
   background: #e0e0e0;
   opacity: 0;
 }
-.header .header-left.shadow::before {
-  opacity: 1;
-}
 @media (min-width: 1200px) {
   .header .header-left {
     width: 70%;
@@ -410,7 +407,7 @@ body.show-overlay .overlay img.overflow-logo {
   height: 100vh;
   top: 0;
   padding-top: 40px;
-  background-color: #9913e1;
+  background-color: rgba(0, 0, 0, 0.8);
   width: calc(100% - 120px);
   margin: 0;
   z-index: 9999;

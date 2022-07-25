@@ -41,13 +41,6 @@
             
         }
 
-        &.shadow {
-            &::before {
-                opacity: 1;
-            }
-
-        }
-
         @include xl {
             width: 70%;
         }
@@ -135,7 +128,7 @@
                 height: 100vh;
                 top: 0;
                 padding-top: 40px;
-                background-color: $color-main;
+                background-color: rgba(0,0,0,0.8);
                 width: calc(100% - 120px);
                 margin: 0;
                 z-index: 9999;
