@@ -82,13 +82,17 @@
 
         .team--arrows {
             position: absolute;
-            top: 50%;
+            top: 43%;
             display: flex;
             justify-content: space-between;
             margin: auto;
             width: 90%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @include md {
+                top: 50%;
+            }
 
             @include lg {
                 width: 100%;

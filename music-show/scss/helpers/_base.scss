@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     margin: 0;
     font-family: $font-family-text;
@@ -167,7 +171,7 @@ img {
  .arrow-next {
     width: 30px;
     cursor: pointer;
-    transition: filter 0.5s, opacity 0.5s;
+    transition: filter 0.5s, opacity 0.5s, transform 0.5s;
 
     &[aria-disabled="true"] {
         opacity: 0.4;
@@ -182,9 +186,17 @@ img {
 .arrow-prev {
     transform: rotate(90deg);
     margin-left: 30px;
+
+    &:not([aria-disabled="true"]):hover {
+        transform: rotate(90deg) scale(1.1);
+    }
 }
 
 .arrow-next {
     transform: rotate(-90deg);
     margin-right: 30px;
+
+    &:not([aria-disabled="true"]):hover {
+        transform: rotate(-90deg) scale(1.1);
+    }
 }

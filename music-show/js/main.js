@@ -49,9 +49,7 @@ for(let i of itemsMenu) {
     i.style.animationDelay = delay + 'ms';
     delay+= 100;
 }
-
-
-    
+  
 // sliders 
 var slider = tns({
     container: '.ticets-slider-container',

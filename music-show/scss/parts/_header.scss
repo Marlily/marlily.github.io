@@ -56,7 +56,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding: 50px 30px 50px 30px;
+            padding: 18px 30px 50px 30px;
 
             @include lg {
                 padding: 110px 50px 70px 90px;
@@ -88,6 +88,9 @@
                 align-items: center;
                 cursor: pointer;
                 z-index: 9999;
+                position: fixed;
+                right: 30px;
+                top: 30px;
 
                 span {
                     width: 90%;
@@ -125,7 +128,7 @@
                 list-style-type: none;
                 left: -100vw;
                 transition: left 0.4s;
-                position: absolute;
+                position: fixed;
                 display: flex;
                 flex-direction: column;
                 left: -100vw;
@@ -138,16 +141,6 @@
                 z-index: 9999;
                 box-shadow: 3px 0px 8px 1px rgba(0,0,0,0.2);
 
-                &::before {
-                    content: url(../img/team-paper-right.png);
-                    position: absolute;
-                    height: 100%;
-                    width: 90px;
-                    top: -32px;
-                    right: -10px;
-                    filter: brightness(1) invert(1);
-                }
-
                 @include lg {
                     padding-top: unset;
                     background-color: transparent;
@@ -156,6 +149,7 @@
                     flex-direction: row;
                     width: auto;
                     height: auto;
+                    box-shadow: none;
 
                     &::before {
                         display: none;
@@ -176,12 +170,32 @@
                     }
 
                     a {
-                        color: $color-light;
+                        color: #ffffff;
                         font-size: 30px;
 
                         @include lg {
                             color: $color-dark;
                             font-size: 20px;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                bottom: -10px;
+                                width: 0;
+                                height: 2px;
+                                background-color: $color-main;
+                                display: block;
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        a::before {
+                            width: 100%;
                         }
                     }
 
@@ -195,7 +209,7 @@
     
                             @include lg {
                                 &::before {
-                                    display:  none;
+                                    content: "";
                                 }
                             }
                         }
@@ -281,6 +295,16 @@
         bottom: 20px;
         left: 20px;
         height: 70px;
+        z-index: 9;
+        transition: all 0.5s;
+
+        img {
+            height: 100%;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         @include lg {
             height: 112px;

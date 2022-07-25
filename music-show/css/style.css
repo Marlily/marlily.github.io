@@ -40,6 +40,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Monda", sans-serif;
@@ -218,7 +222,7 @@ img {
 .arrow-next {
   width: 30px;
   cursor: pointer;
-  transition: filter 0.5s, opacity 0.5s;
+  transition: filter 0.5s, opacity 0.5s, transform 0.5s;
 }
 .arrow-prev[aria-disabled=true],
 .arrow-next[aria-disabled=true] {
@@ -236,10 +240,16 @@ img {
   transform: rotate(90deg);
   margin-left: 30px;
 }
+.arrow-prev:not([aria-disabled=true]):hover {
+  transform: rotate(90deg) scale(1.1);
+}
 
 .arrow-next {
   transform: rotate(-90deg);
   margin-right: 30px;
+}
+.arrow-next:not([aria-disabled=true]):hover {
+  transform: rotate(-90deg) scale(1.1);
 }
 
 .overlay {
@@ -329,7 +339,7 @@ body.show-overlay .overlay img.overflow-logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px 30px 50px 30px;
+  padding: 18px 30px 50px 30px;
 }
 @media (min-width: 992px) {
   .header .header-left .menu {
@@ -360,6 +370,9 @@ body.show-overlay .overlay img.overflow-logo {
   align-items: center;
   cursor: pointer;
   z-index: 9999;
+  position: fixed;
+  right: 30px;
+  top: 30px;
 }
 .header .header-left .menu button.menu-btn span {
   width: 90%;
@@ -390,7 +403,7 @@ body.show-overlay .overlay img.overflow-logo {
   list-style-type: none;
   left: -100vw;
   transition: left 0.4s;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   left: -100vw;
@@ -403,15 +416,6 @@ body.show-overlay .overlay img.overflow-logo {
   z-index: 9999;
   box-shadow: 3px 0px 8px 1px rgba(0, 0, 0, 0.2);
 }
-.header .header-left .menu ul.menu-list::before {
-  content: url(../img/team-paper-right.png);
-  position: absolute;
-  height: 100%;
-  width: 90px;
-  top: -32px;
-  right: -10px;
-  filter: brightness(1) invert(1);
-}
 @media (min-width: 992px) {
   .header .header-left .menu ul.menu-list {
     padding-top: unset;
@@ -421,6 +425,7 @@ body.show-overlay .overlay img.overflow-logo {
     flex-direction: row;
     width: auto;
     height: auto;
+    box-shadow: none;
   }
   .header .header-left .menu ul.menu-list::before {
     display: none;
@@ -440,14 +445,30 @@ body.show-overlay .overlay img.overflow-logo {
   }
 }
 .header .header-left .menu ul.menu-list li.menu-item a {
-  color: #e0e0e0;
+  color: #ffffff;
   font-size: 30px;
 }
 @media (min-width: 992px) {
   .header .header-left .menu ul.menu-list li.menu-item a {
     color: #000;
     font-size: 20px;
+    position: relative;
   }
+  .header .header-left .menu ul.menu-list li.menu-item a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #9913e1;
+    display: block;
+    transition: all 0.3s;
+  }
+}
+.header .header-left .menu ul.menu-list li.menu-item:hover a::before {
+  width: 100%;
 }
 .header .header-left .menu ul.menu-list li.menu-item.active a {
   font-weight: 700;
@@ -457,7 +478,7 @@ body.show-overlay .overlay img.overflow-logo {
 }
 @media (min-width: 992px) {
   .header .header-left .menu ul.menu-list li.menu-item.active a::before {
-    display: none;
+    content: "";
   }
 }
 @media (min-width: 992px) {
@@ -532,6 +553,14 @@ body.show-overlay .overlay img.overflow-logo {
   bottom: 20px;
   left: 20px;
   height: 70px;
+  z-index: 9;
+  transition: all 0.5s;
+}
+.header .header-scroll img {
+  height: 100%;
+}
+.header .header-scroll:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 992px) {
   .header .header-scroll {
@@ -1236,13 +1265,18 @@ body.show-overlay .overlay img.overflow-logo {
 }
 .team .team-slider--wrapper .team--arrows {
   position: absolute;
-  top: 50%;
+  top: 43%;
   display: flex;
   justify-content: space-between;
   margin: auto;
   width: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .team .team-slider--wrapper .team--arrows {
+    top: 50%;
+  }
 }
 @media (min-width: 992px) {
   .team .team-slider--wrapper .team--arrows {
