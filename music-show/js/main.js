@@ -29,16 +29,24 @@ setTimeout(function(){
 document.querySelector('.menu-btn').addEventListener('click', (e) => {
     document.querySelector('.menu-btn').classList.toggle('open');
     document.querySelector('ul.menu-list').classList.toggle('collapsed');
-    document.querySelector('.header-left').classList.toggle('shadow');
 
     if(document.querySelector('.menu-btn').classList.contains("open")) {
         document.body.style.overflow = "hidden";
     } else {
         document.body.style.overflow = "unset";
     }
-
-
 });
+
+document.querySelectorAll('.menu-item a').forEach(function(el) {
+    el.addEventListener('click', function() {
+        if(window.innerWidth < 992) {
+            document.querySelector('.menu-btn').classList.remove('open');
+            document.querySelector('ul.menu-list').classList.remove('collapsed');
+            document.body.style.overflow = "unset";
+        }
+    })
+})
+
 
 let itemsMenu = document.querySelectorAll("li.menu-item");
 
