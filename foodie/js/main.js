@@ -35,7 +35,9 @@ document.querySelector(".header--menuBtn").addEventListener('click', function() 
 
 document.querySelectorAll("ul.header--menu li a").forEach(function(e){
     e.addEventListener('click', function() {
-        document.querySelector("body").classList.toggle("active");
+        if( window.innerWidth < 768 ) {
+            document.querySelector("body").classList.toggle("active");
+        }
     })
  })
 

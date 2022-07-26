@@ -40,6 +40,11 @@ body {
   }
 }
 
+input[type=text], input[type=button], input[type=submit] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 h1, h2, h3 {
   font-family: "Grand Hotel", cursive;
   color: #EB4D55;
@@ -138,7 +143,8 @@ p {
 }
 
 .btn,
-a.btn {
+a.btn,
+input.btn {
   background-color: #EB4D55;
   color: #fff;
   text-transform: uppercase;
@@ -151,12 +157,14 @@ a.btn {
   cursor: pointer;
 }
 .btn.btn-light,
-a.btn.btn-light {
+a.btn.btn-light,
+input.btn.btn-light {
   background-color: #fff;
   color: #EB4D55;
 }
 .btn:hover,
-a.btn:hover {
+a.btn:hover,
+input.btn:hover {
   background-color: #d0d0d0;
 }
 
