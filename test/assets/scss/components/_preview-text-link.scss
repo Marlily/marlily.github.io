@@ -1,0 +1,16 @@
+.preview-text-link {
+    margin: 119px 0 123px;
+
+    @include breakpoint(tablet) {
+        margin: 72px 0 60px;
+    }
+
+    .preview-text-link--item {
+        .thumbnail {
+            height: 370px;
+            @include breakpoint(mobile) {
+                height: 218px;
+            }
+        }
+    }
+}

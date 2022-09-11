@@ -1,0 +1,63 @@
+.text-3-columns {
+    margin-bottom: 80px;
+    @include breakpoint(mobile) {
+        margin-bottom: 72px;
+        margin-top: 36px;
+    }
+
+    .text-3-columns--items {
+        display: flex;
+        flex-wrap: wrap;
+
+        h2,
+        .heading2 {
+            &+p {
+                margin-bottom: 16px;
+            }
+        }
+
+        .text-3-columns--item {
+            width: 32%;
+            padding: 40px 43px;
+            display: flex;
+            flex-direction: column;
+
+            &:nth-child(2) {
+                width: 36%;
+            }
+
+            @include breakpoint(tablet) {
+                padding: 20px 24px;
+            }
+            
+            @include breakpoint(mobile) {
+                width: 100%;
+                padding: 0;
+                
+                &:not(:last-child) {
+                    margin-bottom: 68px;
+                }
+            }
+
+            @include breakpoint(mobileup) {
+
+                &:nth-child(3n+1) {
+                    padding: 40px 39px 40px 0;
+                }
+    
+                &:nth-child(3n+3) {
+                    padding: 40px 0 40px 39px;
+                }
+    
+                &:not(:first-child) {
+                    border-left: 1px solid rgba(97, 80, 62, 0.21);
+                }
+            }
+
+            a {
+                align-self: flex-start;
+                margin-top: auto;
+            }
+        }
+    }
+}
