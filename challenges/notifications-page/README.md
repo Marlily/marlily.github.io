@@ -25,8 +25,3 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.png)
-
-### Links
-
-- [Live Site URL](marlily.github.io/challenges/notifications-page/)
-
