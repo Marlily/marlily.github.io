@@ -1,0 +1,32 @@
+.wrapper {
+    max-width: 100%;
+    width: 33.75rem;
+    margin: auto;
+    padding-top: 5rem;
+    color: $color-white;
+
+    .list-item {
+        background-color: $color-dark2;
+        font-size: 1rem;
+        padding: 1.1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $color-white-opacity;
+
+        button.circle {
+            display: block;
+            background: transparent;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            margin-right: 1rem;
+            border: 1px solid $color-white-opacity;
+            cursor: pointer;
+            //background: linear-gradient(137deg, rgba(164, 242, 231, 1) 0%, rgba(16, 0, 255, 1) 100%);
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

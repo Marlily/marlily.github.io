@@ -1,0 +1,183 @@
+ul.custom-slider,
+ul.cards {
+    li {
+
+        figure {
+            height: 27.375rem;
+
+            @include breakpoint(mobile) {
+                height: 21.5rem;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .inner {
+            padding: 1.5rem 1.5rem 0;
+
+            @include breakpoint(mobile) {
+                padding: 1.5rem 0 0;
+            }
+
+            .tag--date,
+            .tag--category,
+            .tag--author {
+                margin-bottom: 1.25rem;
+                margin-right: 0.75rem;
+            }
+
+            .card-tags {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+            }
+
+            h3, .h3 {
+                font-size: 1.75rem;
+                line-height: 130%;
+                font-weight: 400;
+                transition: $transition;
+                font-family: $tertiary-font;
+            }
+
+            &>a:hover h3 {
+                opacity: 0.8;
+            }
+
+            p {
+                color: $color-black-text-medium;
+                margin: 1.25rem 0 0;
+            }
+        }
+    }
+}
+
+ul.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.75rem 2.5rem;
+
+    li {
+        width: calc(50% - 1.25rem);
+
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
+
+        figure {
+            height: 20.188rem;
+
+            @include breakpoint(mobile) {
+                height: 11.813rem;
+            }
+        }
+    }
+}
+
+@mixin card-podcast {
+    box-shadow: $box-shadow;
+    border-radius: 8px;
+    background: $color-secondary-beige;
+
+    .inner {
+        padding: 1.5rem;
+
+        @include breakpoint(mobile) {
+            padding: 1rem 0.75rem 1.5rem;
+        }
+
+        .tag--date,
+        .tag--category,
+        .tag--author {
+            @include breakpoint(mobile) {
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        h3, .h3 {
+            @include breakpoint(mobile) {
+                font-family: $secondary-font;
+                font-size: 1.5rem;
+                line-height: 140%;
+            }
+        }
+
+        p {
+            margin-top: 0.75rem;
+        }
+    }
+
+    figure {
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $color-black;
+            width: 4rem;
+            height: 4rem;
+            background-size: 1.5rem;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background-image: url(../img/icons/play-light.svg);
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-position: 58% center;
+
+            @include breakpoint(mobile) {
+                width: 3rem;
+                height: 3rem;
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+
+        img {
+            border-radius: 8px 8px 0 0;
+        }
+    }
+}
+
+ul.cards.podcasts {
+    gap: 4rem 2.5rem;
+
+    @include breakpoint(mobile) {
+        gap: 1.5rem;
+    }
+
+    li {
+        @include card-podcast;
+    }
+
+
+}
+
+.card-podcast,
+ul.cards li.card-podcast {
+    @include card-podcast;
+}
+
+ul.cards.custom-slider,
+ul.cards.custom-slider-podcasts {
+    flex-wrap: nowrap;
+    gap: 0;
+
+    li {
+        width: auto;
+    }
+}
+
+.container-slider ul.cards.podcasts li {
+    background-color: transparent;
+    box-shadow: none;
+
+    &>div {
+            background: $color-secondary-beige;
+            box-shadow: $box-shadow; 
+    }
+}

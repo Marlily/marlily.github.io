@@ -1,0 +1,131 @@
+.section-faq {
+    padding: 2.688rem 0;
+
+    .container-small {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3.2rem;
+
+        @include breakpoint(tablet) {
+            flex-wrap: wrap;
+            padding: 0 1.125rem;
+        }
+
+        aside {
+            width: 30%;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+
+            nav {
+                padding: 1.2rem 1.4rem;
+
+                @include breakpoint(tablet) {
+                    padding: 0;
+                }
+                
+                ul {
+                    @include breakpoint(tablet) {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    li {
+                        font-size: 1.25rem;
+                        line-height: 150%;
+
+                        @include breakpoint(tablet) {
+                            margin-bottom: 1rem;
+                            font-size: 1.125rem;
+                        }
+                        
+                        &:not(:last-child) {
+                            margin-bottom: 2.25rem;
+
+                            @include breakpoint(tablet) {
+                                margin-bottom: 1rem;
+                                margin-right: 1.5rem;
+                            }
+
+                            @include breakpoint(mobile) {
+                                margin-right: 1rem;
+                            }
+                        }
+
+
+
+                        a {
+                            transition: $transition;
+
+                            &:hover {
+                                opacity: 0.8
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            width: 69.86%;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+
+            input[type="search"] {
+                width: 100%;
+                margin-bottom: 1rem;
+                border-color: $color-neutral-granitt-500;
+            }
+
+            &>div {
+                padding: 4rem;
+                background-color: $color-white;
+                margin-bottom: 1rem;
+
+                @include breakpoint(tablet) {
+                    padding: 2.5rem;
+                }
+
+                h1 {
+                    margin-bottom: 1.75rem;
+                }
+
+                p {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            &>ul {
+                &>li {
+                    width: 100%;
+
+                    &>a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 1.125rem 1.5rem;
+                        font-size: 1.25rem;
+                        line-height: 150%;
+                        background-color: $color-white;
+                        transition: $transition;
+                        background-image: url(../img/icons/arrow-right-2.svg);
+                        background-repeat: no-repeat;
+                        background-position: calc(100% - 1.5rem) center;
+                        background-size: 1.5rem;
+
+                        &:hover {
+                            box-shadow: $box-shadow;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

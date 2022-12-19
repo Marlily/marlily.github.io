@@ -1,0 +1,43 @@
+.similar-projects {
+    background-color: #36261C;
+    color: $color-white-text-high;
+    padding: 6rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+
+    .title-seeall {
+        a {
+            color: $color-white-text-high;
+            border-bottom-color: $color-white-text-high;
+
+            &::after {
+                filter: brightness(1) invert(1);
+            }
+
+            &:hover {
+                &::after {
+                    filter: brightness(1) invert(1);
+                }
+            }
+        }
+    }
+
+    ul.custom-slider li {
+    
+        figure {
+            @include breakpoint(mobile) {
+                height: 22.625rem;
+            }
+        }
+
+        .inner h3,
+        .inner .h3, {
+            font-family: $primary-font;
+            text-decoration: underline;
+        }
+    }
+    
+
+}

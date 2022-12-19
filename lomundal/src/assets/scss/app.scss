@@ -1,0 +1,41 @@
+@charset 'utf-8';
+@import 'vendor/normalizer';
+@import 'vendor/variables';
+@import 'vendor/base';
+
+@import './node_modules/tiny-slider/src/tiny-slider';
+
+@import 'components/btns';
+@import 'components/inputs';
+@import 'components/accordion';
+@import 'components/nav';
+@import 'components/tabs';
+@import 'components/custom-slider';
+@import 'components/cards';
+
+@import 'sections/header';
+@import 'sections/section-accordion-image';
+@import 'sections/text-2cols';
+@import 'sections/tjenester-cards';
+@import 'sections/dark-block-2cols';
+@import 'sections/prosjekter';
+@import 'sections/univers';
+@import 'sections/section-cta';
+@import 'sections/social-media-boxes';
+@import 'sections/text-small-section';
+@import 'sections/section-form';
+@import 'sections/section-text-img';
+@import 'sections/similar-projects';
+@import 'sections/section-image-blocks';
+@import 'sections/section-testimonials';
+@import 'sections/section-img';
+@import 'sections/section-video';
+@import 'sections/section-products';
+@import 'sections/section-blockquote';
+@import 'sections/section-podcast';
+@import 'sections/section-team';
+@import 'sections/section-faq';
+@import 'sections/footer';
+
+@import 'pages/404';
+

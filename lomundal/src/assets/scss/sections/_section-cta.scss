@@ -1,0 +1,22 @@
+.section-cta {
+    background-color: $color-secondary-yellow;
+    padding: 6rem 0;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+
+    .container {
+        &>h2,
+        &>.h2 {
+            margin: 0 0 2rem;
+        }
+    
+        &>div {
+            margin: 0 0 2rem;
+            max-width: 55.875rem;
+            margin: auto;
+        }
+    }
+}

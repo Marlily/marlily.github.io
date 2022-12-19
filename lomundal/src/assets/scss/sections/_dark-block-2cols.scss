@@ -1,0 +1,65 @@
+.dark-block-2cols {
+    padding: 8rem 0 6rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+
+    .container-small {
+        display: flex;
+        flex-wrap: wrap;
+        color: $color-white;
+
+        &>div {
+            width: 50%;
+            background-color: $color-primary-900;
+            padding: 5.5rem 8.25rem 7.25rem 3rem;
+
+            @include breakpoint(tablet) {
+                padding: 2.5rem 3rem;
+            }
+
+            @include breakpoint(mobile) {
+                width: 100%;
+                padding: 2.5rem 3rem;
+            }
+
+            &>h2,
+            &>.h2 {
+                @include breakpoint(mobile) {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            &>div {
+                margin-bottom: 3rem;
+
+                @include breakpoint(mobile) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .btn {
+                font-size: 1rem;
+                line-height: 1.313rem;
+                letter-spacing: 0.05em;
+            }
+        }
+
+        &>figure {
+            width: 50%;
+            min-height: 100%;
+            max-height: 100%;
+
+            @include breakpoint(mobile) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

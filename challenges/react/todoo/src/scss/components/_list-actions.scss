@@ -1,0 +1,33 @@
+.list-actions {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: $color-dark2;
+    padding: 0.2rem 1.2rem;
+
+    .counter {
+        font-size: 0.8rem;
+        color: $color-white-opacity;
+        cursor: pointer;
+    }
+
+    button {
+        font-size: 0.8rem;
+        background-color: transparent;
+        border: none;
+        color: $color-white-opacity;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0;
+        margin: 0 0.7rem;
+        transition: $transition;
+
+        &.active {
+            color: $color-active;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}

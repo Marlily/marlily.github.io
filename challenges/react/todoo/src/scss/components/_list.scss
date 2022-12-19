@@ -1,0 +1,17 @@
+ul.list {
+    padding: 0;
+    margin: 0;
+
+    .list-item {
+        .close {
+            background-color: transparent;
+            border: none;
+            margin-bottom: -0.45rem;
+            margin-left: auto;
+
+            img {
+                height: 1.25rem;
+            }
+        }
+    }
+}
