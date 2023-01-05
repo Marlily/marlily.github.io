@@ -1,0 +1,41 @@
+// Colors
+
+// -- primary
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+
+
+// -- neutral
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+
+// Typography
+
+// fonts
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/static/PlusJakartaSans-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/static/PlusJakartaSans-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+$font-size: 1rem;
+$font-family: 'Plus Jakarta Sans';
+$font-bold: 800;
+$font-medium: 500;
+
+// layout
+$mobile: 48rem;
+
+//transitions
+$transition: all 0.5s;

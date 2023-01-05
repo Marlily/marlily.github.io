@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/static/PlusJakartaSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/static/PlusJakartaSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  font-size: 100%;
+  font-family: "Plus Jakarta Sans";
+}
+
+a {
+  text-decoration: none;
+  color: hsl(224deg, 21%, 14%);
+  font-weight: 800;
+  transition: all 0.5s;
+}
+
+p {
+  margin: 0;
+}
+p:not(:last-of-type) {
+  margin: 0 0 0.25rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 140%;
+}
+@media (max-width: 48rem) {
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+h1 span {
+  display: inline-block;
+  background-color: hsl(219deg, 85%, 26%);
+  padding: 4px 12px 4px 10px;
+  position: relative;
+  font-size: 1.1rem;
+  color: hsl(0deg, 0%, 100%);
+  line-height: 1;
+  border-radius: 3px;
+  top: -5px;
+  margin-left: 5px;
+}
+@media (max-width: 48rem) {
+  h1 span {
+    top: -2px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.notifications {
+  width: 700px;
+  max-width: calc(100% - 4rem);
+  margin: 4rem auto 4rem;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 48rem) {
+  .notifications {
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+.notifications > button {
+  border: none;
+  padding: 8px 0 0;
+  margin: 0;
+  background: none;
+  color: hsl(219deg, 12%, 42%);
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 1rem;
+}
+@media (max-width: 48rem) {
+  .notifications > button {
+    padding: 2px 0 0;
+  }
+}
+.notifications > button:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notifications > button[disabled] {
+  color: hsl(219deg, 12%, 42%);
+  cursor: not-allowed;
+}
+.notifications > button[disabled]:hover {
+  color: hsl(219deg, 12%, 42%);
+}
+.notifications > ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+@media (max-width: 48rem) {
+  .notifications > ul {
+    margin: 1rem 0 0;
+  }
+}
+.notifications > ul > li {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.5s;
+}
+@media (max-width: 48rem) {
+  .notifications > ul > li {
+    padding: 1rem;
+  }
+}
+.notifications > ul > li:not(:last-child) {
+  margin: 0 0 0.8rem;
+}
+.notifications > ul > li.unread {
+  background-color: hsl(210deg, 60%, 98%);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.notifications > ul > li.unread > div > p:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: hsl(1deg, 90%, 64%);
+  border-radius: 100%;
+  margin: 0 0 0.2rem 0.5rem;
+  transition: all 0.5s;
+}
+.notifications > ul > li > figure {
+  margin: 0 1.5rem 0 0;
+}
+.notifications > ul > li > figure img {
+  height: 3.5rem;
+  display: block;
+}
+@media (max-width: 48rem) {
+  .notifications > ul > li > figure img {
+    height: 3rem;
+  }
+}
+.notifications > ul > li > div p span {
+  font-weight: 800;
+}
+.notifications > ul > li > div p:nth-child(2) {
+  color: hsl(219deg, 14%, 63%);
+  margin-top: 5px;
+}
+.notifications > ul > li a.author:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notifications > ul > li a.name {
+  color: hsl(219deg, 85%, 26%);
+}
+.notifications > ul > li a.post {
+  color: hsl(219deg, 12%, 42%);
+}
+.notifications > ul > li a.post:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.notifications > ul > li a.message {
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  display: block;
+  border: 1px solid hsl(205deg, 33%, 90%);
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 2px;
+  margin-top: 0.7rem;
+}
+.notifications > ul > li a.message:hover {
+  background-color: hsl(211deg, 68%, 94%);
+}
+.notifications > ul > li.picture > div {
+  margin-right: 10px;
+}
+.notifications > ul > li.picture > a {
+  margin-left: auto;
+  display: block;
+  border-radius: 6px;
+}
+.notifications > ul > li.picture > a img {
+  height: 3.75rem;
+  border-radius: 5px;
+  max-width: 5rem;
+  display: block;
+}
+@media (max-width: 48rem) {
+  .notifications > ul > li.picture > a img {
+    height: 3rem;
+  }
+}
+.notifications > ul > li.picture > a:hover {
+  box-shadow: 0px 0px 0px 4px rgba(1, 1, 1, 0.1);
+}/*# sourceMappingURL=style.css.map */
