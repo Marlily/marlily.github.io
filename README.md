@@ -1,4 +1,4 @@
-<h2>Projekty stron internetowych</h2>
+<h2>Strony internetowe</h2>
 
 <h3>Użyte technologie:</h3>
 
