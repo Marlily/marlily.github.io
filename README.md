@@ -4,7 +4,7 @@
 
 HTML, CSS/SASS, JavaScript
 
-<h3>Podgląd:</h3>
+<h3>Podgląd stron:</h3>
 
 - [Lomundal](https://marlily.github.io/lomundal/)
 - [Foodie](https://marlily.github.io/foodie/)
@@ -12,3 +12,5 @@ HTML, CSS/SASS, JavaScript
 
 <br>
 <h2>Aplikacje ReactJS</h2>
+
+- [Kółko i krzyżyk](https://github.com/Marlily/marlily.github.io/tree/main/tic-tac-toe)
