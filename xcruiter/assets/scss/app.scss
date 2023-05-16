@@ -1,0 +1,35 @@
+@charset 'utf-8';
+@import 'vendor/normalizer';
+@import 'vendor/variables';
+@import 'vendor/mixins';
+@import 'vendor/base';
+
+@import 'components/btns';
+@import 'components/nav';
+@import 'components/inputs';
+@import 'components/accordion';
+
+@import 'sections/common';
+@import 'sections/footer';
+@import 'sections/header';
+@import 'sections/text-2cols';
+@import 'sections/text-3cols';
+@import 'sections/logos';
+@import 'sections/big-data';
+@import 'sections/section-accordion';
+@import 'sections/cta-simple';
+@import 'sections/article';
+@import 'sections/benefits';
+@import 'sections/section-cta-employer';
+@import 'sections/section-cta';
+@import 'sections/team';
+@import 'sections/section-form';
+@import 'sections/kontakt-form';
+@import 'sections/offers';
+@import 'sections/employees';
+
+@import 'pages/404';
+@import 'pages/default';
+
+
+@import './node_modules/tiny-slider/src/tiny-slider';

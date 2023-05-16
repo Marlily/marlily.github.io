@@ -1,0 +1,70 @@
+.section-cta-employer {
+    padding: 9.375rem 0 10.625em;
+
+    @include breakpoint(tablet) {
+        padding: 2rem 0 5rem;
+    }
+
+    .container {
+        &>div {
+            background: linear-gradient(180deg, #1F1F1F 0%, #141414 100%);
+            border: 1px solid #252525;
+            border-radius: 1.875rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 6.25rem 4.938rem;
+            width: 100%;
+
+            @include breakpoint(tablet) {
+                flex-wrap: wrap;
+                padding: 2.5rem;
+            }
+
+            @include breakpoint(mobile) {
+                padding: 1.5rem;
+            }
+        
+        &>figure {
+            width: 16.063rem;
+            height: 16.063rem;
+            background: #030303;
+            border: 1px solid #272727;
+            border-radius: 1.759rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 12rem;
+            }
+
+            @include breakpoint(tablet) {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &>div {
+            width: calc(100% - 16.063rem - 3rem);
+            color: $color-white-text-medium;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+
+            h2 {
+                color: $color-white-text-medium;
+                font-size: 1.75rem;
+                line-height: 130%;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                margin: 0 0 1.5rem;
+            }
+
+            p {
+                color: $color-white-text-medium;
+            }
+        }
+    }
+    }
+}

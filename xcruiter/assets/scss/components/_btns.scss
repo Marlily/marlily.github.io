@@ -1,0 +1,196 @@
+button{
+    color:$color-black-text-medium;
+}
+
+.btn,
+.btn--secondary {
+    border: 0.0625rem solid $color-primary; 
+    outline: none;
+    @include gradient-background;
+    border-radius: 100px;
+    padding: 0.938rem 3.125rem;
+    font-size: 1.125rem;
+    line-height: 160%;
+    letter-spacing: -0.02em;;
+    font-weight: 500;
+    color: $color-black-text-medium;
+    transition: $transition;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2.938rem 0 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    text-align: center;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        @include gradient-background-hover;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        left: -15%;
+        top: -15%;
+        z-index: -1;
+        opacity: 0;
+        transition: $transition;
+    }
+
+
+    &:hover {
+        color: $color-black-text-medium;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        transition: all 0.05s;
+        color: $color-black-text-medium;
+    }
+
+    &:focus-visible,
+    &:focus {
+        color: $color-black-text-medium;
+        border: 2px solid $color-info;
+        box-shadow: 0px 0px 0px 2px rgba(160, 199, 250, 0.6);
+    }
+
+    &.btn--xs {
+        padding: 0.8rem 1.5rem;
+        line-height: 140%;
+    }
+}
+
+    // other btns
+    .btn--secondary {
+        color: $color-black-text-medium;
+        background-color: transparent;
+        border: 1.5px solid $color-primary;
+        @include gradient-text;
+
+        &::before {
+            @include gradient-background;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-black-text-medium;
+            @include gradient-background;
+            border-color: $color-primary;
+            -webkit-text-fill-color: unset;
+        }
+
+        &:active {
+            transition: all 0.05s;
+            color: $color-black-text-medium;
+        }
+
+        &:focus-visible {
+            color: $color-black-text-medium;
+            background-color: $color-primary;
+            -webkit-text-fill-color: unset;
+            -webkit-background-clip: unset;
+            border: 2px solid $color-info;
+        }
+
+        
+    }
+
+
+    // light background versions
+    .btn-dark,
+    .btn-dark--secondary {
+        border: 0.0625rem solid $color-black-text-medium; 
+        background-color: $color-black-text-medium;
+        outline: none;
+        border-radius: 100px;
+        padding: 0.938rem 3.125rem;
+        font-size: 1.125rem;
+        line-height: 160%;
+        letter-spacing: -0.02em;;
+        font-weight: 500;
+        color: $color-white-text;
+        transition: $transition;
+        text-decoration: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2.938rem 0 0;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transform-style: preserve-3d;
+        overflow: hidden;
+    
+        &:last-child {
+            margin: 0;
+        }
+  
+        &:hover {
+            color: $color-black-text-medium;
+            background-color: $color-white;
+            border: 0.0625rem solid $color-black-text-medium; 
+        }
+    
+        &:active {
+            transition: all 0.05s;
+            color: $color-black-text-medium;
+        }
+    
+        &:focus-visible,
+        &:focus {
+            color: $color-black-text-medium;
+            @include gradient-background;
+            border: 2px solid $color-info;
+        }
+
+        &.btn--xs {
+            padding: 0.8rem 1.5rem;
+            line-height: 140%;
+        }
+    }
+    
+        // other btns
+        .btn-dark--secondary {
+            color: $color-black-text-medium;
+            background-color: $color-white;
+            border: 0.0625rem solid $color-black-text-medium; 
+    
+            &::before {
+                @include gradient-background;
+            }
+    
+            &:hover {
+                border: 0.0625rem solid $color-black-text-medium; 
+                background-color: $color-black-text-medium;
+                color: $color-white-text-medium;
+            }
+    
+            &:active {
+                transition: all 0.05s;
+                color: $color-black-text-medium;
+            }
+    
+            &:focus-visible {
+                @include gradient-background;
+                border: 2px solid $color-info;
+            }
+    
+            
+        }
+        .btn-full{
+            width:100%;
+        }

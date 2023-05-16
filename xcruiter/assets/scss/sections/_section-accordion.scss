@@ -1,0 +1,42 @@
+.section-accordion {
+    padding: 9.375rem;
+
+    @include breakpoint(tablet) {
+        padding: 0 0 5rem;
+    }
+
+
+    &>.container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &>div {
+            width: 44.16%;
+
+            h2 {
+                color: $color-white-text-medium;
+            }
+        }
+
+        &>.accordion {
+            width: 48.5%;
+        }
+
+        @include breakpoint(tablet) {
+            &>div,
+            &>.accordion {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.kontakt-oss-skjema .section-accordion {
+    padding-top: 0;
+    padding-bottom: 6.25rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 2rem;
+    }
+}
