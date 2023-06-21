@@ -6,6 +6,7 @@ HTML, CSS/SASS, JavaScript
 
 <h3>Podgląd stron:</h3>
 
+- [xcruiter](https://marlily.github.io/xcruiter/)
 - [Lomundal](https://marlily.github.io/lomundal/)
 - [Foodie](https://marlily.github.io/foodie/)
 - [Music Show](https://marlily.github.io/music-show/)
