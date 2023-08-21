@@ -14,9 +14,11 @@
         border-bottom: 1px solid $grey;
         flex-wrap: wrap;
         text-align: center;
+        flex-direction: column;
 
         @include lg {
             text-align: left;
+            flex-direction: row;
             justify-content: flex-start;
             padding-bottom: 3.875rem;
             margin-bottom: 3.875rem;
@@ -33,7 +35,7 @@
             color: $grey;
             margin: 0;
             
-            @include sm {
+            @include lg {
                 margin-left: auto;
             }
         }

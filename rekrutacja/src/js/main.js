@@ -1,7 +1,7 @@
 // header slider 
 let myCarousel = document.querySelector('#header-carousel')
 let carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 5000
+  interval: 0
 })
 
 //search button
@@ -29,6 +29,10 @@ var portoflioMacy = Macy({
     }
   }
 });
+
+window.addEventListener('resize', () => {
+  portoflioMacy.recalculate(true);
+})
 
 //portfolio show more
 const btnShowMore = document.querySelector('#portfolio-btn');

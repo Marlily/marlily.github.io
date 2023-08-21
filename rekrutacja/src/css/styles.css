@@ -514,11 +514,17 @@ input[type=text] {
 
 .header .carousel-item {
   position: relative;
-  height: 31rem;
+  min-height: 35rem;
+  transition: none;
 }
 @media (min-width: 62rem) {
   .header .carousel-item {
-    height: 46.063rem;
+    min-height: 31rem;
+  }
+}
+@media (min-width: 62rem) {
+  .header .carousel-item {
+    min-height: 46.063rem;
   }
 }
 .header .carousel-item .header-photo {
@@ -873,6 +879,9 @@ input[type=text] {
   display: none;
   opacity: 0;
 }
+.portfolio .portfolio-masonry .portfolio-item:hover {
+  cursor: zoom-in;
+}
 .portfolio > .btn-wrapper {
   position: absolute;
   z-index: 2;
@@ -986,10 +995,12 @@ input[type=text] {
   border-bottom: 1px solid #F5F0EC;
   flex-wrap: wrap;
   text-align: center;
+  flex-direction: column;
 }
 @media (min-width: 62rem) {
   .footer .footer-top {
     text-align: left;
+    flex-direction: row;
     justify-content: flex-start;
     padding-bottom: 3.875rem;
     margin-bottom: 3.875rem;
@@ -1003,7 +1014,7 @@ input[type=text] {
   color: #F5F0EC;
   margin: 0;
 }
-@media (min-width: 48rem) {
+@media (min-width: 62rem) {
   .footer .footer-top p {
     margin-left: auto;
   }

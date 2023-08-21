@@ -39,6 +39,10 @@
                 display: none;
                 opacity: 0;
             }
+
+            &:hover {
+                cursor: zoom-in;
+            }
         }
     }
 

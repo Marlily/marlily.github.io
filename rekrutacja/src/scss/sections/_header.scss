@@ -2,10 +2,15 @@
 
     .carousel-item {
         position: relative;
-        height: 31rem;
+        min-height: 35rem;
+        transition: none;
 
         @include lg {
-            height: 46.063rem;
+            min-height: 31rem;
+        }
+
+        @include lg {
+            min-height: 46.063rem;
         }
 
         .header-photo {
