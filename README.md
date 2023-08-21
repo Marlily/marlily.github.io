@@ -15,3 +15,4 @@ HTML, CSS/SASS, JavaScript
 <h2>Aplikacje ReactJS</h2>
 
 - [Kółko i krzyżyk](https://github.com/Marlily/marlily.github.io/tree/main/tic-tac-toe)
+- [Aplikacja Notatki](https://github.com/Marlily/marlily.github.io/tree/main/notes-app)
