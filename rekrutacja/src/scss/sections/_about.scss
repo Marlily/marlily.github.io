@@ -1,0 +1,60 @@
+.about {
+    position: relative;
+
+    .about-img-wrapper{
+        height: 22em;
+
+        @include sm {
+            height: 33rem;
+        }
+
+        @include lg {
+            height: auto;
+        }
+    }
+
+    .about-img {
+        height: 20rem;
+        width: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        
+
+        @include sm {
+            height: 30rem;
+        }
+
+        @include lg {
+            width: 47.77%;
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+    .container {
+        padding-bottom: 3rem;
+
+        @include lg {
+            padding-top: 8.438rem;
+            padding-bottom: 8.438rem;
+            padding-left: 10rem;
+        }
+
+        .heading-2 {
+            margin-bottom: 2.5rem;
+
+            &+p {
+                margin-bottom: 2.5rem;
+
+                @include sm {
+                    margin-bottom: 4.5rem;
+                }
+            }
+        }
+
+
+    }
+}
