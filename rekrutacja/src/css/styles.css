@@ -1,3 +1,4 @@
+@import '../bootstrap/bootstrap.min.css';
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 @media (min-width: 48rem) {
   .container {
@@ -1112,4 +1113,9 @@ input[type=text] {
 }
 .footer .copyright p:last-child {
   margin-top: 2rem;
+}
+@media (min-width: 62rem) {
+  .footer .copyright p:last-child {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

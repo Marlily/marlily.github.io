@@ -143,6 +143,10 @@
 
             &:last-child {
                 margin-top: 2rem;
+
+                @include lg {
+                    margin-top: 0;
+                }
             }
         }
     }
