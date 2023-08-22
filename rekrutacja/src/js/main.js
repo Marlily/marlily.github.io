@@ -1,4 +1,3 @@
-
 // header slider 
 let myCarousel = document.querySelector('#header-carousel')
 let carousel = new bootstrap.Carousel(myCarousel, {
@@ -90,3 +89,15 @@ function animateElem() {
 
 
 window.addEventListener("scroll", animateElem);
+
+// preloader 
+window.addEventListener("load", () => {
+
+  setTimeout( () => {
+    document.querySelector('.preloader').classList.add('hide')
+  }, 1000) ;
+
+  setTimeout( () => {
+    document.querySelector('.preloader').style.display = "none"
+  }, 1700) ;
+});

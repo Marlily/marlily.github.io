@@ -44,10 +44,9 @@
             }
         }
 
-        .heading-1,
-        p {
+        .carousel-content {
             animation: showYourself 1s forwards;
-            animation-delay: 0.5s;
+            animation-delay: 0.3s;
             translate: 0 2rem;
             opacity: 0;
         }
@@ -57,10 +56,7 @@
                 opacity: 1;
             }
 
-            .heading-1,
-            p {
-                animation: showYourself 1s forwards;
-            }
+
 
             @keyframes showYourself {
                 100% {
@@ -76,7 +72,7 @@
 
             @include sm {
                 padding-top: 4rem;
-                padding-bottom: 8.938rem;
+                padding-bottom: 7.438rem;
             }
 
             @include lg {
@@ -144,7 +140,7 @@
         background-color: $grey;
 
         @include sm {
-            padding: 1.5rem 2rem 1.2rem;
+            padding: 1.85rem 2rem 1.8rem;
         }
 
         .carousel-control-next-icon, 
@@ -155,7 +151,7 @@
                 width: 1rem;
 
                 @include sm {
-                    width: 1.518rem;
+                    width: 1.6rem;
                 }
             }
         }

@@ -17,6 +17,16 @@
             }
         }
 
+        .offer-text {
+            
+
+            @include lg {
+                padding: 0 20rem 0 0.8rem;
+            }
+        }
+
+
+
         .offer-list {
             display: flex;
             list-style: none;
@@ -24,13 +34,14 @@
             flex-wrap: wrap;
             width: 100%;
             padding: 0;
+            margin-bottom: 0;
 
             @include sm {
                 gap: 1rem;
             }
 
             @include lg {
-                gap: 3rem;
+                gap: 4rem;
             }
 
             .offer-item {

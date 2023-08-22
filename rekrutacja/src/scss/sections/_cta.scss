@@ -8,13 +8,14 @@
         justify-content: space-between;
         align-items: flex-end;
         flex-wrap: wrap;
+        margin: 0 3.8px;
 
         @include sm {
             padding: 3.5rem 3rem;
         }
 
         @include lg {
-            padding: 7.5rem 6.875rem;
+            padding: 7.33rem 6.872rem;
             flex-wrap: nowrap;
         }
 

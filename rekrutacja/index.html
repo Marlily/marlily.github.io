@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  
   <title>giarddesign</title>
 
   <!-- styles -->
@@ -11,6 +13,12 @@
 
 </head>
 <body>
+
+  <div class="preloader">
+    <img src="./src/images/icons/leaf.svg" alt="icon">
+    <img src="./src/images/icons/leaf.svg" alt="icon">
+    <img src="./src/images/icons/leaf.svg" alt="icon">
+  </div>
 
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
@@ -40,17 +48,17 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio" tabindex="-1">Realizacje</a>
+            <a class="nav-link" href="#portfolio">Realizacje</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#footer" tabindex="-1">Kontakt</a>
+            <a class="nav-link" href="#footer">Kontakt</a>
           </li>
         </ul>
 
         <form class="navbar-search">
           <input class="" type="text" aria-label="Search">
-          <button class="btn-search">
+          <button class="btn-search" tabindex="0">
             <img src="./src/images/icons/search.svg" alt="search">
             
             <span class="btn-close"></span>
@@ -69,7 +77,7 @@
           
           <div class="container">
             <div class="row carousel-bg">
-              <div class="col-lg-6">
+              <div class="col-lg-6 carousel-content">
                 <h1 class="heading-1">Nowoczesna aranżacja Twojego ogrodu</h1>
                 <p>Marka GiardDesign to wieloletnie doświadczenie&nbsp;i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług&nbsp;z indywidualnym podejściem&nbsp;do każdego projektu.</p>
       
@@ -90,7 +98,7 @@
           <div class="container">
             <div class="row carousel-bg">
               <div class="col-sm-6 col-lg-6"></div>
-              <div class="col-sm-6 col-lg-6">
+              <div class="col-sm-6 col-lg-6 carousel-content">
                 <h1 class="heading-1">Indywidualne podejście</h1>
                 <p>Oryginalne projekty tworzone&nbsp;z myślą&nbsp;o indywidualnych potrzebnach naszych klientów.</p>
       
@@ -114,7 +122,7 @@
         <div class="carousel-item">
           <div class="container">
             <div class="row carousel-bg">
-              <div class="col-lg-6">
+              <div class="col-lg-6 carousel-content">
                 <h1 class="heading-1">Nowoczesna aranżacja Twojego ogrodu</h1>
                 <p>Przykładowy tekst</p>
       
@@ -156,7 +164,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-12 col-sm-10 mx-auto">
+      <div class="col-12 col-sm-10 mx-auto offer-text">
         <h2 class="heading-top animation-up">Oferta</h2>
         <p class="heading-2 animation-up">Działamy <span>kompleksowo</span></p>
         <p class="animation-up">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
@@ -203,10 +211,10 @@
       <div class="col-lg-6 about-img-wrapper">
         <img class="about-img" src="./src/images/about.jpg" alt="photo">
       </div>
-      <div class="col-lg-6">
-        <h2 class="heading-top animation-left">O firmie</h2>
-        <p class="heading-2 animation-left">Tworzymy<br><span>z pasją</span></p>
-        <p class="animation-left">
+      <div class="col-lg-6 about-space animation-left">
+        <h2 class="heading-top">O firmie</h2>
+        <p class="heading-2">Tworzymy<br><span>z pasją</span></p>
+        <p>
           Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
         </p>
 
@@ -229,10 +237,10 @@
   </div>
 
  
-    <div class="portfolio-masonry">
+    <div class="portfolio-masonry animation-up">
 
       <!-- visible -->
-      <a data-fslightbox href="src/images/portfolio/photo-8.jpg" class="portfolio-item">
+      <a  data-fslightbox href="src/images/portfolio/photo-8.jpg" class="portfolio-item">
         <img src="./src/images/portfolio/miniatures/photo-8.jpg" alt="photo">
       </a>
 
@@ -370,7 +378,7 @@
 
         <div class="copyright">
           <p>Prawa zastrzeżone © 2022</p>
-          <p>made by <a href="https://adrespect.pl/" target="_blank"><img src="./src/images/logo-adrespect.svg" alt="logo"></a></p>
+          <p>made by <a href="https://adrespect.pl/" target="_blank"><img src="./src/images/logo-footer.svg" alt="logo"></a></p>
         </div>
 
         

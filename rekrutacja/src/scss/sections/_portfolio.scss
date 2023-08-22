@@ -2,6 +2,19 @@
     position: relative;
     overflow: hidden;
     padding-top: 3.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    @include lg {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &>.container {
+        @include lg {
+            padding-left: 90px;
+        }
+    }
 
     @include lg {
         padding-top: 7.5rem;
@@ -9,7 +22,7 @@
     
     &::after {
         content: "";
-        background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0.00) 100%);
+        background: linear-gradient(360deg, #DCC1AB 15%,  rgba(214, 183, 158, 0.00) 100%);
         position: absolute;
         display: block;
         bottom: 0;
@@ -21,7 +34,9 @@
 
     .portfolio-masonry {
         margin-top: 3rem;
-        transition: height $transition-duration;
+        transition: height $transition-duration, translate $transition-duration, opacity $transition-duration;
+
+        
 
         @include lg {
             margin-top: 6rem;
@@ -43,6 +58,7 @@
             &:hover {
                 cursor: zoom-in;
             }
+
         }
     }
 
@@ -70,3 +86,4 @@
     }
 
 }
+
