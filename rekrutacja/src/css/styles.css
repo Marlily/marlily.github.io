@@ -400,6 +400,7 @@ input[type=text] {
 .navbar {
   padding: 1rem 0;
   background: #ffffff;
+  width: 100%;
 }
 .navbar .dropdown-toggle::after {
   content: "";
