@@ -1,4 +1,4 @@
-<h2>Zadanie rekrutacyjne dla <img src="./src/images/logo-footer.svg"></h2>
+<h2>Zadanie rekrutacyjne</h2>
 
 <h3>Użyte technologie i biblioteki:</h3>
 
