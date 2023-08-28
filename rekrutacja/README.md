@@ -1,4 +1,4 @@
-<h2>Zadanie rekrutacyjne</h2>
+<h2>Zadanie rekrutacyjne od firmy AdRespect</h2>
 
 <h3>Użyte technologie i biblioteki:</h3>
 
