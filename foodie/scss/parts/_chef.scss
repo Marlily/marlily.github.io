@@ -1,0 +1,27 @@
+.chef {
+    text-align: center;
+    position: relative;
+
+    .chef--img {
+        height: 230px;
+        width: 230px;
+        border-radius: 100%;
+        margin: auto;
+
+        @include md {
+            height: 330px;
+            width: 330px;
+        }
+    }
+
+    .chef--text {
+        font-size: 1.3em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include xs {
+            font-size: 2.1em;
+        }
+    }
+}

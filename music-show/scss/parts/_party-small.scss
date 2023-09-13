@@ -1,0 +1,56 @@
+.party-small {
+    background-color: $color-main;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+    text-align: center;
+
+    @include xl {
+        text-align: left;
+    }
+
+    .party-small--shape {
+        height: 150px;
+        position: absolute;
+        left: -20px;
+        bottom: -10px;
+        z-index: 0;
+
+        @include xl {
+            height: 255px;
+            left: -38px;
+            bottom: -35px;
+        }
+    }
+
+    .container  {
+        display: flex;
+        flex-wrap: wrap;
+
+        .party-small--title {
+            width: 100%;
+            z-index: 1;
+
+            @include xl {
+                width: 45%
+            }
+        }
+
+        .party-small--text {
+            width: 100%;
+            z-index: 1;
+            margin: 30px 0;
+
+            @include xl {
+                width: 42%
+            }
+
+            p {
+                margin: 5px 0 25px;
+            }
+
+        }
+
+
+    }
+}

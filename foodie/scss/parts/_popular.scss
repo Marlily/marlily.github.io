@@ -1,0 +1,37 @@
+.popular {
+    position: relative;
+
+    .popular--items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 80px;
+
+        .popular--item {
+            width: 100%;
+            text-align: center;       
+
+            @include lg {
+                width: 30%;
+            }
+            
+            img {
+                width: 230px;
+                height: auto;
+                border-radius: 100%;
+                object-fit: cover;
+                margin-bottom: 30px;
+
+                @include md {
+                    width: 200px;
+                }
+
+                @include xl {
+                    width: 330px;
+                }
+
+            }
+
+        }
+    }
+} 

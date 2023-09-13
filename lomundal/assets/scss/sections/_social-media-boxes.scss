@@ -1,0 +1,66 @@
+.social-media-boxes {
+    padding: 6rem 0;
+
+    @include breakpoint(mobile) {
+        padding: 2.5rem 0;
+    }
+
+    .container-small {
+
+    &>ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        &>li {
+            width: 50%;
+            padding-bottom: 3.063rem;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+
+            &>h3, 
+            &>.h3, {
+                margin-bottom: 0.188rem;
+            }
+
+            &>p {
+                margin-bottom: 1.313rem;
+                color: $color-black-text-medium;
+            }
+
+            &>.btn {
+                font-size: 1rem;
+                line-height: 1.313rem;
+                letter-spacing: 0.05em;
+                font-weight: 400;
+            }
+
+            &:nth-of-type(1) {
+                border-bottom: 1px solid $color-black;
+                
+
+                @include breakpoint(tabletup) {
+                    padding-right: 8.5rem;
+                    border-right: 1px solid $color-black;
+                    border-bottom: none;
+                }
+    
+            }
+
+            &:nth-of-type(2) {
+                
+                @include breakpoint(tabletup) {
+                    padding-left: 8.5rem;
+                }
+
+                @include breakpoint(tablet) {
+                    padding-bottom: 0;
+                    padding-top: 2.5rem;
+                }
+    
+            }
+        }
+    }
+}
+}

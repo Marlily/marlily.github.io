@@ -1,0 +1,170 @@
+.header {
+
+    .carousel-item {
+        position: relative;
+        min-height: 35rem;
+        transition: none;
+
+        @include lg {
+            min-height: 31rem;
+        }
+
+        @include lg {
+            min-height: 46.063rem;
+        }
+
+        .header-photo {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+            z-index: 0;
+
+            @include sm {
+                width: 40%;     
+                height: 100%; 
+            }
+
+            @include lg {
+                width: 47.77%;      
+            }
+            
+            &-left {
+
+                @include sm {
+                    width: calc(47.77% - 2rem); 
+                    right: unset;
+                    left: 0;
+                }
+            }
+        }
+
+        .carousel-content {
+            animation: showYourself 1s forwards;
+            animation-delay: 0.3s;
+            translate: 0 2rem;
+            opacity: 0;
+        }
+
+        &.active {
+            .header-photo {
+                opacity: 1;
+            }
+
+
+
+            @keyframes showYourself {
+                100% {
+                    translate: 0 0;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &>.container {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+
+            @include sm {
+                padding-top: 4rem;
+                padding-bottom: 7.438rem;
+            }
+
+            @include lg {
+                padding-top: 9.031rem;
+            }
+
+            .carousel-bg {
+                background-color: $beige;
+                z-index: 2;
+                position: relative;
+                margin-right: 1rem;
+                padding: 1rem 0.2rem;
+
+                @include sm {
+                    padding: 0;
+                    background-color: transparent;
+                    margin-right: 0;
+                }
+            }
+
+            .heading-1 {
+                max-width: 31.25rem;
+
+                &~p {
+                    max-width: 30.563rem;
+                    margin-bottom: 1rem;
+
+                    @include sm {
+                        margin-bottom: 4.5rem;
+                    }
+                }
+            }
+
+            .btn {
+                margin-bottom: 1rem;
+
+                @include sm {
+                    margin-bottom: 1.5rem;
+                }
+
+            }
+        }
+    }
+
+    .slider-btns {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        right: 0;
+        width: 6rem;
+        z-index: 3;
+
+        @include sm {
+            width: 12rem;
+        }
+    }
+
+    .carousel-control-next, 
+    .carousel-control-prev {
+        opacity: 1;
+        width: 50%;
+        padding: 0;
+        position: static;
+        padding: 1rem 1.5rem 0.7rem;
+        background-color: $grey;
+
+        @include sm {
+            padding: 1.85rem 2rem 1.8rem;
+        }
+
+        .carousel-control-next-icon, 
+        .carousel-control-prev-icon {
+            background-image: none;
+
+            img {
+                width: 1rem;
+
+                @include sm {
+                    width: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .carousel-control-prev {
+        padding-right: 1rem;
+    }
+
+    .carousel-control-next {
+        padding-left: 1rem;
+    }
+    
+
+
+}

@@ -1,0 +1,65 @@
+.text-2cols {
+    padding: 0 0 9.375rem;
+
+    @include breakpoint(tablet) {
+        padding: 0 0 5rem;
+    }
+
+    &.m-small {
+        @include breakpoint(tablet) {
+            padding: 0 0 2.5rem; 
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &>h2, .h2 {
+            width: 44.16%;
+            max-width: 23.375rem;
+            margin-bottom: 0;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &>div {
+            width: 48.5%;
+
+            @include breakpoint(tablet) {
+                width: 100%;
+            }
+
+            &>p { 
+                margin-bottom: 1.5rem;
+                color: $color-white-text-medium;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                @include breakpoint(tablet) {
+                    font-size: 1rem;
+                }
+                
+            }
+
+            a.link-underline {
+                margin-top: 3.5rem;
+
+                @include breakpoint(mobile) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        a.btn--secondary {
+            margin-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.overlay {
+    position: fixed;
+    z-index: -999;
+}
+
+body.show-overlay {
+    
+
+    .overlay {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+
+        .overlay-item {
+            background-color: $color-main;
+            width: 100%;
+            transition: all 1s;
+            left: 0;
+            height: 10%;
+
+            &.hide-right {
+                margin-left: 100%;
+            }
+
+            &.hide-left {
+                margin-left: -100%;
+            }
+        }
+
+        img.overflow-logo {
+            width: 278px;
+            position: absolute;
+            z-index: 999999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: brightness(0) invert(1);
+            transition: opacity 0.6s;
+        }
+    }
+
+}

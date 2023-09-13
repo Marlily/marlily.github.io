@@ -1,0 +1,397 @@
+body {
+    font-family: $primary-font;
+    color: $color-white;
+    background-color:$color-black;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid $color-info;
+    transition: 0.2s;
+    outline-offset: -3px;
+}
+
+// ------containers
+.container {
+    max-width: 68.688rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+
+    @include breakpoint(tablet) {
+        max-width: 100%;
+        padding: 0 1.25rem;
+    }
+
+    &--xl {
+        max-width: 83rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+        position: relative;
+
+        @include breakpoint(tablet) {
+            max-width: 100%;
+            padding: 0 1.25rem;
+        }
+    }
+}
+
+.container-xs {    
+    max-width: 32.5rem;;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    @include breakpoint(mobile) {
+        max-width: 100%;
+        padding: 0 1.25rem;
+    }
+}
+
+ 
+// ------links
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &.link-underline {
+        color: $color-white-text-medium;
+        font-size: 1.125rem;
+        line-height: 150%;
+        text-decoration: underline;
+        display: block;
+    }
+}
+
+@mixin link-underline {
+    position: relative;
+    color: inherit;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        bottom: -3px;
+        background-color: $color-primary-2;
+        content: ' ';
+        transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+        transform-origin: left center;
+
+    }
+
+    &:hover,
+    a:hover & {
+        color: inherit;
+
+        &:not(:disabled):not(.disabled) {
+            &::after {
+                transform-origin: right center;
+                transform: scaleX(0);
+            }
+        }
+    }
+}
+
+// ------ images
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+// ------ headings
+h1, 
+h1.h1, h2.h1, h3.h1, h4.h1, 
+.h1 {
+    font-size: 3.625rem;
+    line-height: 130%;
+    font-weight: 400;
+    font-family: $primary-font;
+    margin: 0 0 2.5rem;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(tablet) {
+        font-size: 2.5rem;
+        line-height: 130%;
+    }
+}
+
+h2, .h2 {
+    font-size: 2.5rem;
+    line-height: 130%;
+    font-weight: 400;
+    font-family: $primary-font;
+    margin: 0 0 1.5rem;
+
+    @include breakpoint(tablet) {
+        margin: 0 0 1rem;
+        font-size: 1.875rem;
+    }
+}
+
+h3, .h3 {
+    font-size: 1.875rem;
+    line-height: 130%;
+    font-weight: 400;
+    font-family: $primary-font;
+    margin: 0 0 1rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.875rem;
+        line-height: 130%;
+        margin: 0 0 1rem;
+    }
+}
+
+h4, .h4 {
+    
+    font-size: 1.75rem;
+    line-height: 130%;
+    font-weight: 400;
+    font-family: $primary-font;
+    margin: 0 0 .75rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.5rem;
+        line-height: 130%;
+    }
+}
+
+h5, .h5 {
+    font-size: 1.5rem;
+    line-height: 150%;
+    font-weight: 500;
+    margin: 0 0 .5rem;
+
+    @include breakpoint(tablet) {
+        margin: 0 0 .75rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+h6, .h6 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+
+    @include breakpoint(tablet) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+}
+
+// ------ paragraphs
+p {
+    font-size: 1.125rem;
+    margin: 0 0 2rem;
+    line-height: 150%;
+    color:$color-white-text;    
+    @include breakpoint(tablet) {
+        font-size: 1rem;
+    }
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+// ------ lists
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+
+    &>li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// ------ paragraphs
+blockquote,
+blockquote p {
+    font-size: 2rem;
+    line-height: 150%;
+    font-weight: 400;
+    margin: 0;
+
+    @include breakpoint(tablet) {
+        font-size: 1.5rem;
+    }
+
+    &.serif {
+        font-family: $secondary-font;
+        font-style: italic;
+    }
+}
+
+// ------ wysiwyg
+.wysiwyg {
+    a:not(.btn) {
+        text-decoration: underline;
+        transition: $transition;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    ul {
+        font-size: 1.25rem;
+        line-height: 150%;
+        font-weight: 400;
+        padding-inline-start: 1.375rem;
+        margin: 0 0 1rem;
+        list-style: disc;
+
+        @include breakpoint(tablet) {
+            font-size: 1.125rem;
+        }
+
+        &>li {
+            margin-bottom: 0.25rem;
+            p:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+
+    ol {
+        font-size: 1.25rem;
+        line-height: 150%;
+        font-weight: 400;
+        padding-inline-start: 1.375rem;
+        margin: 0 0 1rem;
+        list-style: decimal;
+
+        @include breakpoint(tablet) {
+            font-size: 1.125rem;
+        }
+
+        &>li {
+            margin-bottom: 0.25rem;
+            p:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+
+    &>*:last-child {
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 4.25rem;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        font-weight: 400;
+        margin: 0 0 5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 2.125rem;
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 130%;
+        letter-spacing: normal;
+        font-weight: 400;
+        margin: 0 0 1.5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.75rem;
+        }
+    }
+
+    h3 {
+        font-size: 2.125rem;
+        line-height: 130%;
+        letter-spacing: normal;
+        font-weight: 400;
+        margin: 0 0 1rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h4 {
+        font-size: 1.8rem;
+        line-height: 130%;
+        letter-spacing: normal;
+        font-weight: 400;
+        margin: 0 0 0.8rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        line-height: 130%;
+        letter-spacing: normal;
+        font-weight: 400;
+        margin: 0 0 0.5rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.3rem;
+        }
+    }
+
+    h6 {
+        font-size: 1.3rem;
+        line-height: 130%;
+        letter-spacing: normal;
+        font-weight: 400;
+        margin: 0 0 0.4rem;
+    }
+
+    p {
+        margin: 0 0 1.8rem;
+        font-size: 18px;
+        line-height: 150%;
+
+        @include breakpoint(tablet) {
+            line-height: 1.8rem;
+        }
+    }
+}
+
+.breadcrumbs {
+ 
+    a {
+        font-size: 1.125rem;
+        line-height: 160%;
+        letter-spacing: -0.02em;
+    }
+
+    span {
+        color: #888888;
+    }
+}

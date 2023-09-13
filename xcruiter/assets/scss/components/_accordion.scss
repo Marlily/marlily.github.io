@@ -1,0 +1,109 @@
+.accordion {
+        padding: 0;
+        list-style: none; 
+
+        @include breakpoint(tablet) {
+            padding-top: 2rem;
+        }
+
+        &>li {
+            position: relative;  
+            margin-bottom: -1px;
+            background-color: $color-dark;
+            border-radius: 6px;
+            padding: 1.1rem 1.5rem;
+            
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &>a.toggler > h3,
+            &>a.toggler > h4,
+            &>a.toggler > .h3, 
+            &>a.toggler > .h4 {
+                z-index: 4; 
+                position: relative;
+                margin: 0;
+                font-size: 	1.1rem;
+                line-height: 150%;
+                cursor: pointer;
+                padding-right: 7rem;
+                color: $color-white-text-medium;
+
+                @include breakpoint(laptop) {
+                    padding-right: 4rem;
+                }
+
+                @include breakpoint(tablet) {
+                    margin: 0;
+                    font-size: 1rem;
+                    padding-right: 3rem;
+                }
+
+                &:focus {
+                    border: 2px solid $color-info;
+                }
+
+                &::after,
+                &::before {
+                    position: absolute;
+                    width: 1.234rem;
+                    height: 0.131rem;
+                    background: $color-white-text-medium;
+                    content: "";
+                    right: 0;
+                    top: calc(50% - 0.0625rem);
+                    transition: all 0.5s;
+                }
+
+                &::before {
+                    position: absolute;
+                    height: 1.234rem;
+                    width: 0.125rem;
+                    background: $color-white-text-medium;
+                    content: "";
+                    transition: all 0.5s;
+                    right: 0.617rem;
+                    top: calc(50% - 0.617rem);
+                }
+            }
+
+            &>div {
+                max-height: 0;
+                overflow: hidden;
+                transition: $transition;
+                padding-right: 2.4rem;
+                
+                
+                .wysiwyg {
+                    padding: 1.35rem 0 0.75rem;
+                    
+                    @include breakpoint(tablet) {
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                * {
+                    color: $color-white-text-medium;
+                }
+            }
+
+
+
+            &.open{
+
+                h3 {
+                    &::after {
+                        transform: rotate(-45deg);
+                    }
+
+                    &::before {
+                        transform: rotate(135deg);
+                    }
+                }
+            }
+
+        }
+    }

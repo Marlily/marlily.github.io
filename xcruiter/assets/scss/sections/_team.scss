@@ -1,0 +1,115 @@
+.team {
+
+    @include breakpoint (mobile) {
+        padding-top: 2.5rem;
+    }
+
+    .container {
+        &>h2 {
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint (mobile) {
+            padding-right: 0;
+        }
+    }
+
+    .shuffle-filters {
+        display: flex;
+        gap: 1.5rem;
+        padding: 0.625rem 0;
+        margin: 0 0 3.625rem;
+        border-bottom: 1px solid #565656;
+
+        @include breakpoint (mobile) {
+            gap: 0;
+            margin: 0 0 1.875rem;
+        }
+
+        li {
+            button {
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                font-size: 1.125rem;
+                line-height: 150%;
+                color: #777777;
+                transition: color 0.5s;
+                cursor: pointer;
+
+                &.active {
+                    color: $color-white-text-medium;
+                }
+
+                @include breakpoint (mobile) {
+                    font-size: 1rem;
+                }
+            }
+
+
+        }
+    }
+
+    @include breakpoint(mobile) {
+        #tns2-ow {
+            margin: 0 0 5.438rem;
+        }
+
+        .tns-outer {
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 100%;
+                width: 4rem;
+                background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .shuffle-container {
+        position: relative;
+        margin: 0 0 7.688rem;
+
+        @include breakpoint(mobile) {
+            margin: 0 0 3.313;
+        }
+
+        li {
+            border-bottom: 1px solid #565656;
+            margin-bottom: 2.125rem;
+
+            figure {
+                width: 100%;
+                height: 18.625rem;
+                margin: 0 0 1.5rem;
+
+                img {
+                    width: 100%;
+                    border-radius: 15px;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                color: $color-white-text-medium;
+                line-height: 160%;
+                letter-spacing: -0.02em;
+                margin: 0;
+            }
+
+            p {
+                font-size: 1.125rem;
+                color: $color-white-text-medium;
+                line-height: 150%;
+                margin: 0 0 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nn">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="" />
+    <meta name="robots" content="noindex">
+    
+    <title>Kontakt oss - sendt skjema</title>
+
+    <link rel="stylesheet" href="assets/dist/app.css" />
+  </head>
+
+  <body class="e404">
+    <nav class="navigation">
+      <div class="container--xl">
+        <a href="#">
+          <img src="assets/img/logo.svg" alt="logo" />
+        </a>
+
+        <button class="menu-btn">
+          <img src="./assets/img/icons/arrow-mobile.svg" alt="arrow" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="menu">
+          <ul class="primary-menu">
+            <li>
+              <a href="#">Om X Cruiter</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
+          </ul>
+
+          <ul class="primary-menu">
+            <li>
+              <a href="#" class="">Logg inn</a>
+            </li>
+            <li class="li-btn">
+              <a href="#" class="btn btn--xs">Kom i gang</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- START - header -->
+    <header class="header abstract-bg header-simple">
+      <div class="header-dots"></div>
+      <div class="header-dots"></div>
+      <div class="container--xl">
+        <p class="breadcrumbs">
+          <a href="#">Forside</a> /
+          <span>404</span>
+        </p>
+      </div>
+      <div class="container">
+        <div>
+          <h1>Noe gikk galt, men vi jobber med å fikse det</h1>
+          <p>Beklager, det ser ut til at du har havnet på en side som ikke finnes. Kanskje finner du det du leter etter hvis du går tilbake til forsiden.</p>
+          <a href="#" class="btn">Gå til forside</a>
+        </div>
+      </div>
+    </header>
+    <!-- END - header -->
+
+    <!-- START - footer  -->
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <a href="#">
+            <img src="assets/img/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="right">
+          <div class="org">
+            <p>Org.nr: 987 654 321</p>
+            <p>&copy; 2023 X Cruiter. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END - footer -->
+
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+      attribute float scale;
+
+      void main() {
+
+          vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+          gl_PointSize = scale * ( 300.0 / - mvPosition.z );
+
+          gl_Position = projectionMatrix * mvPosition;
+
+      }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+      uniform vec3 color;
+
+      void main() {
+
+          if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
+
+          gl_FragColor = vec4( color, 1.0 );
+
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/dist/app.js"></script>
+  </body>
+</html>

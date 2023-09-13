@@ -1,0 +1,40 @@
+.section-menu {
+    background-color: $color-bg1;
+
+    .section-menu--items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .section-menu--item {
+            width: 100%;
+            display: flex;
+            margin-top: 60px;
+            flex-direction: column;
+            text-align: center;
+
+            @include lg {
+                width: calc(50% - 50px);
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .section-menu--left {
+
+                @include lg {
+                    margin-right: 30px;
+                }
+
+                img {
+                    width: 100px;
+                    margin-bottom: 25px;
+                }
+            }
+
+            .section-menu-right {
+
+            }
+        }
+    }
+}

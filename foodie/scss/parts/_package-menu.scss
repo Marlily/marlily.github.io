@@ -1,0 +1,36 @@
+.package-menu {
+    background-color: $color-bg1;
+
+    .package-menu--items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .package-menu--item {
+            width: 100%;
+            background-color: $color-bg2;
+            border-radius: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            margin-top: 50px;
+
+            @include xl {
+                width: calc(33% - 20px);
+            }
+
+            img {
+                height: 100px;
+                margin: 50px 0 50px;
+            }
+
+            .title3, h3.title3 {
+                font-size: 2.5em;
+            }
+
+            .btn {
+                margin: auto;
+            }
+        }
+    }
+} 
