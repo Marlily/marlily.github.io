@@ -10,7 +10,7 @@ HTML, CSS/SASS, JavaScript
 - [Lomundal](https://marlily.github.io/lomundal/)
 - [Foodie](https://marlily.github.io/foodie/)
 - [Music Show](https://marlily.github.io/music-show/)
-- [Giarddesign](https://marlily.github.io/rekrutacja/)
+- [Giarddesign](https://marlily.github.io/giarddesign/)
 
 <br>
 <h2>Aplikacje ReactJS</h2>
