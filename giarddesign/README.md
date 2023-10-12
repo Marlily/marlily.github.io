@@ -10,4 +10,4 @@
 
 <h3>Demo: </h3>
 
-[https://marlily.github.io/rekrutacja/](https://marlily.github.io/giarddesign/)
+[https://marlily.github.io/giarddesign/](https://marlily.github.io/giarddesign/)
