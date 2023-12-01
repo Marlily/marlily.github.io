@@ -1,0 +1,131 @@
+.article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.375rem;
+    margin-top: 1.5625rem;
+
+    p {
+        text-align: justify;
+
+        &.p-bold {
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.625rem;
+        }
+    }
+
+    .left {
+        order: 1;
+
+        @include lg {
+            width: 48.73%;
+            order: 0;
+        }
+
+        figure {
+            margin: 0 0 5.25rem;
+            position: relative;
+            padding-top: 5.75rem;
+
+            @include lg {
+                padding-top: 9.25rem;
+                margin: 0 0 2.25rem;
+            }
+
+            img:first-child {
+                width: calc(100% + 2rem);
+                height: 184px;
+                position: absolute;
+                left: -1rem;                
+                top: 0.5625rem;
+                object-fit: cover;
+                z-index: -1;
+
+                @include sm {
+                    height: 300px;
+                }
+
+                @include lg {
+                    width: 657px;
+                    height: 300px;
+                    right: 3.4rem;
+                    left: unset;
+                }
+            }
+
+            img:nth-of-type(2) {
+                width: 52.5%;
+                display: block;
+                margin-left: auto;
+                margin-right: -1rem;
+
+                @include md {
+                    margin-right: 1rem;
+                }
+                
+                @include lg {
+                    width: 367px;
+                    height: 489px;
+                    margin-right: -0.5rem;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        figure + p {
+            margin-bottom: 2.25rem;
+        }
+
+        ul {
+            margin: 0 0 1.1875rem;
+            font-weight: 500;
+
+            li {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .right {
+        
+        @include lg {
+            width: 45.44%;
+        }
+
+        figure {
+            margin: 0;
+            position: relative;
+            margin-top: 5.6875rem;
+            display: none;
+
+            @include lg {
+                display: block;
+            }
+
+            img {
+                height: 20.3125rem;
+                width: 666px;
+                object-fit: cover;
+                vertical-align: top
+            }
+
+        }
+    }
+}
+
+.img-mobile {
+    width: 100%;
+    height: 12.1875rem;
+    margin: 2.625rem 0 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include lg {
+        display: none;
+    }
+}
